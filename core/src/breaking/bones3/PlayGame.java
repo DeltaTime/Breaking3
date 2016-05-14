@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import breaking.bones3.screens.PlayScreen;
+import breaking.bones3.screens.TelaAbertura;
 
 public class PlayGame extends Game {
 	public SpriteBatch batch;
@@ -22,12 +23,16 @@ public class PlayGame extends Game {
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		setScreen(new PlayScreen(this));
+		this.setScreen(new TelaAbertura(this));
 
 	}
 
 	@Override
 	public void render () {
 		super.render();
-	}
+    	}
+        
+        public void dispose(){
+            batch.dispose();
+        }
 }
