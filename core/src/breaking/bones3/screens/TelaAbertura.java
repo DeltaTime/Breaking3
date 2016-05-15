@@ -82,7 +82,7 @@ public class TelaAbertura implements Screen{
         
         
         
-        if(TimeUtils.millis()> starttime+8000){
+        if(TimeUtils.millis()> starttime+5000){
             game.setScreen(new Menu(game));
             dispose();
         }

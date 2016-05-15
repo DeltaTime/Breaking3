@@ -68,7 +68,7 @@ public class PlayScreen implements Screen {
 
         //carregar o map e configurar
         mapLoader = new TmxMapLoader();
-        map = mapLoader.load("map.tmx");
+        map = mapLoader.load("cavernaesqueletomap.tmx");
         renderer = new OrthogonalTiledMapRenderer(map,1/PlayGame.PPM);
 
         //centralizar a camera

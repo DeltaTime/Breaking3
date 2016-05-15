@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" nextobjectid="47">
+ <tileset firstgid="1" name="Bones_A" tilewidth="32" tileheight="32" tilecount="128" columns="8">
+  <image source="Bones_A.png" width="256" height="512"/>
+ </tileset>
+ <tileset firstgid="129" name="Bones_B" tilewidth="32" tileheight="32" tilecount="256" columns="16">
+  <image source="Bones_B.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Camada de Tiles 1" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt1EsKwkAQRdGOThwK4iwG/CAYjavMxtQVqCtQV6BuwNdQBSEk0GCgP7zBoUNGdemkcmPMBlawhUKeXaxhHgjbcIAJHKUl1o7mfcTckcJ92IZKOippibGja74cSmmzZ9+/H3qHzjeVcxl5h9IOe08LUQTWUXbY93ToXtPdFlKHi9Q6dLfpXoutY2fcvr+hzQJoJyIiIiIiIiIiIiKidNVwhksAs/zbYd3l1PeniPrqhler4wo36fM9p4s3fODb6nvAU/p8z+giy4wZwTjr7vM931B9vudIxQ+4pecB
+  </data>
+ </layer>
+ <layer name="osso grande" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt0rEJgDAQQNEMrwOoOIA6gTiDG+g+HhhBxMLGIvAe/CIJKY4kpXdN1EZdXle3szpXgiEao+mxv0Z9rgRzOt9gue1t0Z7OWaq3SwW5Zil9DvjCPwcAAAAAAAAA+McBYwEOpQ==
+  </data>
+ </layer>
+ <layer name="osso pequeno" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztz1EJACAQBcEXXiPYVwQj+OEdM7ABNgEAAAAAAAAAgDfGrbKZ+g/HSo+PDg9Hl4/fbcgbBDM=
+  </data>
+ </layer>
+ <layer name="osso medio" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt0LEJADAMBDEv7xGyb1rjOgQeJLgFrgoAAAAAAAAAAN7pVaqzSpT8f0r9z38X3IwFgw==
+  </data>
+ </layer>
+ <layer name="buraco" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20ON6AAAAAAAAAAAADg3wAnEAAB
+  </data>
+ </layer>
+ <layer name="pedra" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzdmdtKBDEMhvsMgojHxQMOnlb0Th/OC31xt7DBn9gcmmbGwUBwWTttvk6SJt1SSvkscbka1LOd3gf0AuaY9rYQx9fCHJXhwbnOIfytesnmGpVRhkOYCz9LHCTZHL2+QH5EDBkcR6MQjvVxTF37Whl/vNMTQU/LDzf3qywOj3g4uK+g0nPIMZXlOchOzoHvYFt0DpI54pwL2kW+QHJXfsd2tceTezGeluDA+TUfwvHXxphWPsB1NiFLbbtaPt2yCWNGk9Ze/MX70HSE47ksw/FY5DyKsb329+FVi8NaZzLGRsTLsSn/g6P3fbTiaim/mkouh7ROVSsOe1U7kzPeh8QR7WOwl+mdA3sgLa+97PRpr6/GfrVyvFcoh3vPY5qb9hLzP9da+70Bx/v+O28dKbFoObw333hyAc2pxbbEodX/VPctzeF9Djms2pP30hIH3w/Of6esIa2lPXfR4OjZW4mD71vknOsR3tdY/Vorh09lvRwkVsxQ7uP1+Ro5vL68Zg4uWh/B5/Wcc5k1hJej54yM1Iqjyjky9q7uz0i9E6mPcP9xH0ft8N7b9krLn7kf8d66Z+6R/4/KEhza2S7ldH7+W+LlsOqunlhBf6s5/Zwp9/UMDuk86I2favsBaI9NEQ4882jfpHqZr+WxMWJT5BnvucY5DhxKNU4rPvC7DA5tnMbhjR9+53azn+s2gcN756dxeO/MeZxncrTOeO89Pl+7t7/P5GjZjDZ67iCsvkWSTI7IHbE0D42t8cLPBVKM6WyOD0U9MYx1s9XnzxUfFocnhqJ9/ho4uN2Y93h+lXqvNXJEzhfK55yjtweifZubw+oP+buM3BdncLTuInhd22uT9bsiSpZf4e+v3rVbErkLnIMjQ+aqr6TfZea6y9kG5/4GPYvDgA==
+  </data>
+ </layer>
+ <layer name="esqueleto completo" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt08ENQEAQhtHd6ET/TaACVIAKRAMmcXHfw4S8l3z3fw5TCgAAAAAAAAAAmfpXXzZEYzRlD2k0R0u0Zg9ptEV7dGQPaXSW5zeu7CGNan3u6Gr2kn+7ASjMCfc=
+  </data>
+ </layer>
+ <layer name="esqueleto" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztmktu2zAQhmnkDEbQNA+kTmPkZbfdtedTDxAXPkBem+yCJJvs8jpA0vYAdU9Q9AKdgTjwdEBKIjm0tPAH/CAjkRTHJEccRsakUVg9gZ7Z9XPQhc3Tva9CMcjnaEF2/AD9ZNdvQLc2T/emQjHI52hxDJqAvkXku8QJ6BR0FpHvElc2vbb5guVNTX5Ju8T6qK4R66OWtMuw4bUmFCkdiaBv6vs6sWmsTU0h2zX2DkMhZOIv/t/ztUjdO2B/se8frLR//35kvXXQBmgzsN5EpFq47Ggylju23K7xzzk5d4aOe1VozilfW4egI9DIzOdc3Rrqe/IcHhu0hWsN0XpAXOPB7yM8NugC96AH0CPoLegNaE2Irvvq5SB0rr6AXkHfQQPQNugj6BNL6Tr3GbxeKDnioF+gGei3mff3M+gLSwe2LPqMsSl9Bq8XSo446I9N/5qyv3ugfaEDW4b7DF5PUudHcsRBvV6ZrvTK/vY9qqon0Yzjx0rtxKB1rhL7DtdCazxwPWLctKvQVgxa48HXIyLP4DTlInU8ZLu5YwUfqeNBMbhvjfP2qcyWKLNq5bqH4G/zzqqwqSTXuWNq+7QnRL9BPoTUli+JgfaE+K5HH8L9YVu+hBM6j8kO1HtT2uCyY9FnZaHzjOzg/jD3eOT4TdAOsoE08pStOvcL2WvkOD9EOy6FXP7KB70HQuZz7LlEFbgXvhPajmgnZD7nsKOKJvEbj+k15/2DYltN4DG95rx/VWyrTVLsWPQZdNXz6+xou69NWc6rcHKer6bakeI7KSagbxlScNlR1Tf5PO09A493QmyTdqAN2Dd+3iPPQ3Miv4Vxseq4NhN/T219bseeUh+bIL+FiYWPhzH+vc2i9zyh0Hh0lZA14xtP7f+vdZF/Tsi6oQ==
+  </data>
+ </layer>
+ <layer name="cabeça" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt2bENgDAQBEE34f4T6AD6w4klEiIMr5NmpMv3428NAL63je3VEQscY2d1RLheHbBI2h1PvWl3TP22NInNAAAAAAAAvOdv/o8LmRwGDQ==
+  </data>
+ </layer>
+ <layer name="peças" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztz6ENADAMA8HsDzNxeUlI1MrSHTF9VwEAvNO/A5ak/UjrnfS1SRKbAQAAAAAAIMUBL9UDbQ==
+  </data>
+ </layer>
+ <objectgroup name="peças">
+  <object id="2" x="1153" y="448" width="30" height="32"/>
+  <object id="25" x="1184" y="385" width="31" height="30"/>
+  <object id="26" x="1248" y="415" width="31" height="33"/>
+  <object id="27" x="1312" y="417" width="30" height="31"/>
+  <object id="28" x="1376" y="321" width="30" height="30"/>
+  <object id="29" x="1375" y="354" width="31" height="28"/>
+ </objectgroup>
+ <objectgroup name="portao">
+  <object id="33" x="1215.67" y="544.333" width="127.667" height="127.333"/>
+  <object id="36" x="1344" y="575.667" width="32" height="64.6667"/>
+  <object id="37" x="1215.33" y="576" height="2.66667"/>
+  <object id="40" x="1184.33" y="576" width="31" height="64.6667"/>
+  <object id="43" x="1215.16" y="543.686" width="22.3042" height="44.3873" rotation="42.6503"/>
+  <object id="44" x="1184.25" y="641.118" width="22.3042" height="44.3873" rotation="-46.3882"/>
+  <object id="45" x="1376.39" y="576.414" width="22.3042" height="44.3873" rotation="-223.566"/>
+  <object id="46" x="1361.08" y="624.767" width="22.3042" height="44.3873" rotation="47.2659"/>
+ </objectgroup>
+</map>
