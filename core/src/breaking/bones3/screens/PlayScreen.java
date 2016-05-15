@@ -57,7 +57,7 @@ public class PlayScreen implements Screen {
     public PlayScreen(PlayGame game){
         this.game = game;
 
-        //atlas = new TextureAtlas("Player.pack");
+        atlas = new TextureAtlas("Player.pack");
 
         //Camera seguir o jogador
         gameCam = new OrthographicCamera();

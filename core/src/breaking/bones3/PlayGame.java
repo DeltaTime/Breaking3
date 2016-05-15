@@ -23,16 +23,12 @@ public class PlayGame extends Game {
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		this.setScreen(new TelaAbertura(this));
+		setScreen(new TelaAbertura(this));
 
 	}
 
 	@Override
 	public void render () {
 		super.render();
-    	}
-        
-        public void dispose(){
-            batch.dispose();
-        }
+	}
 }
