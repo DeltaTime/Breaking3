@@ -30,6 +30,7 @@ import breaking.bones3.PlayGame;
 import breaking.bones3.scenes.Hud;
 import breaking.bones3.sprites.Player;
 import breaking.bones3.tools.B2WorldCreator;
+import breaking.bones3.tools.WorldContactListener;
 
 /**
  * Created by wolos on 11/05/2016.
@@ -77,11 +78,13 @@ public class PlayScreen implements Screen {
         //criando o box
         world = new World(new Vector2(0,0),true); // para colocar gravidade setar o segundo parametro -10
         b2dr = new Box2DDebugRenderer();
+
         //criar o mundo com objetos
         new B2WorldCreator(world,map);
 
 
         player = new Player(world, this);
+        world.setContactListener(new WorldContactListener());
 
     }
 

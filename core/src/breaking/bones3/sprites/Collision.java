@@ -11,6 +11,12 @@ public class Collision extends InteractiveTileObject {
     public Collision(World world, TiledMap map, Rectangle bounds){
 
         super(world,map,bounds);
+        fixture.setUserData(this);
+
+    }
+
+    @Override
+    public void onEspadaHit() {
 
     }
 }

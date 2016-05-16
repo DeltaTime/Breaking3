@@ -3,9 +3,11 @@ package breaking.bones3.sprites;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.CircleShape;
+import com.badlogic.gdx.physics.box2d.EdgeShape;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
@@ -112,9 +114,17 @@ public class Player extends Sprite {
         FixtureDef fdef = new FixtureDef();
         CircleShape shape = new CircleShape();
         shape.setRadius(9/ PlayGame.PPM);
+        fdef.filter.categoryBits = PlayGame.PLAYER_BIT;
+        fdef.filter.maskBits = PlayGame.DEFAULT_BIT | PlayGame.DOOR_BIT | PlayGame.PECAS_BIT;
 
         fdef.shape = shape;
         b2body.createFixture(fdef);
+
+        EdgeShape espada = new EdgeShape();
+        espada.set(new Vector2(-10/ PlayGame.PPM, 1/PlayGame.PPM), new Vector2(10/ PlayGame.PPM, 1/PlayGame.PPM));
+        fdef.shape = espada;
+        fdef.isSensor = true;
+        b2body.createFixture(fdef).setUserData("espada");
 
     }
 

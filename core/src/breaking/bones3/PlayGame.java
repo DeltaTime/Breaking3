@@ -18,6 +18,16 @@ public class PlayGame extends Game {
 	public static final int V_HEIGHT = 480;
 	public static final float PPM = 100; //pixel per meter
 
+	public static final short DEFAULT_BIT = 1;
+	public static final short PLAYER_BIT = 2;
+	public static final short PECAS_BIT = 4;
+	public static final short PAREDE_BIT = 8;
+	public static final short PEDRA_BIT = 4;
+	public static final short OSSO_BIT = 8;
+	public static final short DOOR_BIT = 8;
+	public static final short DESTROY_BIT = 16;
+
+
 
 	
 	@Override

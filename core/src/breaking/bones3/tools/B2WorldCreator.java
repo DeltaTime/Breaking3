@@ -12,6 +12,10 @@ import com.badlogic.gdx.physics.box2d.World;
 
 import breaking.bones3.sprites.Doors;
 import breaking.bones3.sprites.Collision;
+import breaking.bones3.sprites.Osso;
+import breaking.bones3.sprites.Parede;
+import breaking.bones3.sprites.Pecas;
+import breaking.bones3.sprites.Pedra;
 
 /**
  * Created by wolos on 12/05/2016.
@@ -25,21 +29,49 @@ public class B2WorldCreator {
 
 
 
-        //create de Doors
-        for(MapObject object : map.getLayers().get(2).getObjects().getByType(RectangleMapObject.class)){
+
+
+
+        //creat the pecas
+        for(MapObject object : map.getLayers().get(11).getObjects().getByType(RectangleMapObject.class)){
             Rectangle rect = ((RectangleMapObject) object).getRectangle();
-            new Collision(world,map,rect);
+
+            new Pecas(world, map, rect);
+
+
+
+        }
+        //create de porta
+        for(MapObject object : map.getLayers().get(12).getObjects().getByType(RectangleMapObject.class)){
+            Rectangle rect = ((RectangleMapObject) object).getRectangle();
+            new Doors(world,map,rect);
 
 
 
         }
 
-
-        //creat the collision
-        for(MapObject object : map.getLayers().get(3).getObjects().getByType(RectangleMapObject.class)){
+        //creat colisao paredes
+        for(MapObject object : map.getLayers().get(13).getObjects().getByType(RectangleMapObject.class)){
             Rectangle rect = ((RectangleMapObject) object).getRectangle();
 
-            new Doors(world, map, rect);
+            new Parede(world, map, rect);
+
+
+
+        }
+
+        for(MapObject object : map.getLayers().get(14).getObjects().getByType(RectangleMapObject.class)){
+            Rectangle rect = ((RectangleMapObject) object).getRectangle();
+
+            new Pedra(world, map, rect);
+
+
+
+        }
+        for(MapObject object : map.getLayers().get(15).getObjects().getByType(RectangleMapObject.class)){
+            Rectangle rect = ((RectangleMapObject) object).getRectangle();
+
+            new Osso(world, map, rect);
 
 
 

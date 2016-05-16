@@ -3,29 +3,27 @@ package breaking.bones3.sprites;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.math.Rectangle;
-import com.badlogic.gdx.physics.box2d.BodyDef;
-import com.badlogic.gdx.physics.box2d.FixtureDef;
-import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
 
 import breaking.bones3.PlayGame;
 
 /**
- * Created by wolos on 12/05/2016.
+ * Created by wolos on 16/05/2016.
  */
-public class Doors extends InteractiveTileObject{
+public class Parede extends InteractiveTileObject {
+    public Parede(World world, TiledMap map, Rectangle bounds){
 
-
-
-    public Doors(World world, TiledMap map, Rectangle bounds){
         super(world,map,bounds);
         fixture.setUserData(this);
-        setCategoryFilter(PlayGame.DOOR_BIT);
+        setCategoryFilter(PlayGame.PAREDE_BIT);
+
     }
+
     @Override
     public void onEspadaHit() {
-        Gdx.app.log("Colisao", "Porta");
+        Gdx.app.log("Colisao", "Parede");
         setCategoryFilter(PlayGame.DESTROY_BIT);
+
 
     }
 }
