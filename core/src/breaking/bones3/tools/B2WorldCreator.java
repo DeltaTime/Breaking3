@@ -32,50 +32,13 @@ public class B2WorldCreator {
 
 
 
-        //creat the pecas
-        for(MapObject object : map.getLayers().get(11).getObjects().getByType(RectangleMapObject.class)){
+        //creat the pedra
+        for(MapObject object : map.getLayers().get(4).getObjects().getByType(RectangleMapObject.class)){
             Rectangle rect = ((RectangleMapObject) object).getRectangle();
-
-            new Pecas(world, map, rect);
-
-
-
-        }
-        //create de porta
-        for(MapObject object : map.getLayers().get(12).getObjects().getByType(RectangleMapObject.class)){
-            Rectangle rect = ((RectangleMapObject) object).getRectangle();
-            new Doors(world,map,rect);
-
-
-
-        }
-
-        //creat colisao paredes
-        for(MapObject object : map.getLayers().get(13).getObjects().getByType(RectangleMapObject.class)){
-            Rectangle rect = ((RectangleMapObject) object).getRectangle();
-
-            new Parede(world, map, rect);
-
-
-
-        }
-
-        for(MapObject object : map.getLayers().get(14).getObjects().getByType(RectangleMapObject.class)){
-            Rectangle rect = ((RectangleMapObject) object).getRectangle();
-
             new Pedra(world, map, rect);
 
-
-
         }
-        for(MapObject object : map.getLayers().get(15).getObjects().getByType(RectangleMapObject.class)){
-            Rectangle rect = ((RectangleMapObject) object).getRectangle();
 
-            new Osso(world, map, rect);
-
-
-
-        }
 
 
 
