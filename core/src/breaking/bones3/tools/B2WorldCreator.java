@@ -10,6 +10,7 @@ import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
 
+import breaking.bones3.sprites.Coracao;
 import breaking.bones3.sprites.Doors;
 import breaking.bones3.sprites.Collision;
 import breaking.bones3.sprites.Osso;
@@ -32,10 +33,10 @@ public class B2WorldCreator {
 
 
 
-        //creat the pedra
-        for(MapObject object : map.getLayers().get(4).getObjects().getByType(RectangleMapObject.class)){
+        //creat the pecas
+        for(MapObject object : map.getLayers().get(2).getObjects().getByType(RectangleMapObject.class)){
             Rectangle rect = ((RectangleMapObject) object).getRectangle();
-            new Pedra(world, map, rect);
+            new Coracao(world, map, rect);
 
         }
 

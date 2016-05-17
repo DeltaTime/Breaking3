@@ -115,7 +115,8 @@ public class Player extends Sprite {
         CircleShape shape = new CircleShape();
         shape.setRadius(9/ PlayGame.PPM);
         fdef.filter.categoryBits = PlayGame.PLAYER_BIT;
-        fdef.filter.maskBits = PlayGame.DEFAULT_BIT | PlayGame.DOOR_BIT | PlayGame.PECAS_BIT;
+        // player pode colidir
+        fdef.filter.maskBits = PlayGame.DEFAULT_BIT | PlayGame.DOOR_BIT | PlayGame.PECAS_BIT | PlayGame.PEDRA_BIT | PlayGame.OSSO_BIT | PlayGame.CORACAO_BIT;
 
         fdef.shape = shape;
         b2body.createFixture(fdef);

@@ -1,106 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" nextobjectid="167">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" nextobjectid="171">
  <tileset firstgid="1" name="Bones_A" tilewidth="32" tileheight="32" tilecount="128" columns="8">
   <image source="Bones_A.png" width="256" height="512"/>
  </tileset>
  <tileset firstgid="129" name="Bones_B" tilewidth="32" tileheight="32" tilecount="256" columns="16">
   <image source="Bones_B.png" width="512" height="512"/>
  </tileset>
- <layer name="Camada de Tiles 1" width="50" height="50" visible="0">
+ <layer name="BackGround" width="50" height="50">
   <data encoding="base64" compression="zlib">
-   eJzt1EsKwkAQRdGOThwK4iwG/CAYjavMxtQVqCtQV6BuwNdQBSEk0GCgP7zBoUNGdemkcmPMBlawhUKeXaxhHgjbcIAJHKUl1o7mfcTckcJ92IZKOippibGja74cSmmzZ9+/H3qHzjeVcxl5h9IOe08LUQTWUXbY93ToXtPdFlKHi9Q6dLfpXoutY2fcvr+hzQJoJyIiIiIiIiIiIiKidNVwhksAs/zbYd3l1PeniPrqhler4wo36fM9p4s3fODb6nvAU/p8z+giy4wZwTjr7vM931B9vudIxQ+4pecB
+   eJzdmV1PQyEMhrncpc6YRfdhNpedzDn3D73QPy4kNGm6FlrgsDMv3sToaeGBthRcOed+vHZeB69N/Fmjd8O3klZeHwXC8xy89pFj5vUbWXpxBIaT13OBtsTXPgr2oxdHDYPE8Rn346uAwxoLEEc1DJRjERnOkeMcWSwc1rFTNi9er4KWGY5U7s3cdU6NyUFjJTVW+HbIcIDNQ8Z/Cw68B6lY4Dis8QI2YZ/WURuBA8+LxsLRXefF1ulqL2eH52yx2SO7g8CB/Wv2Kxdrmhh8M9pMlWNntIHaBnXt1hwXI0eIa038UY7ALdVRnNsSx1Pj/ajZ7zHOITrOcEOOt3/C0XI/xo6rwfXjyOWhVZb+rCVH6T0G911WH7Rfk+raI1FqvUrWAq/JpcAHrCWu/1QLhkPqB1twlPgo6fFydvj7VP+fugNMjSPXe0r9Y6oXl/pea3+bsqO9t7XXkTjoutXErnYetRzDnXCkcgZq3z1wlMTyFDlK/WrOuZY9RA+OHqIcLdYurE9Nv1PSH1GOFn1Xi/fC2vzolZv3xpE626WaTs//Vhy5vsuSKzjeQk1fE0nvey04uPpjyZ8w9zmSZU4lHEfHrxvHQcfSzLFkTi1tchxzhSA+ufxYumlwaPOHnrv4/2C1HNo3v5p7i3SutOTgznjrO75mbC7WMAf8Dnyl4pPj4OZ8SthxvjGHJldqOFLj5/JT6we+DflCzwXQckSO74Q0Ocz1zVJs4r3uyaHJIeme3zuuSjhS/T7sT+5snCIH93cYR4pNqOeUw3oHgnXj5j9vyJG7H9K9LHkvbsHBvUXgfNa8VUi5pjmPWsUV+LWMLdX4W+aH9fzTzMlqk8sp6f8yY73lfBX6/gPlNSQA
   </data>
  </layer>
  <layer name="pecas" width="50" height="50">
   <data encoding="base64" compression="zlib">
-   eJzt0bENACAMA8GMxP7TUVEgpaMIie4meMsRAAAAAAAAAAD/WtUBXLI/un/Uvf+YsgNebFNMAPE=
-  </data>
- </layer>
- <layer name="osso grande" width="50" height="50" visible="0">
-  <data encoding="base64" compression="zlib">
-   eJzt0rEJgDAQQNEMrwOoOIA6gTiDG+g+HhhBxMLGIvAe/CIJKY4kpXdN1EZdXle3szpXgiEao+mxv0Z9rgRzOt9gue1t0Z7OWaq3SwW5Zil9DvjCPwcAAAAAAAAA+McBYwEOpQ==
-  </data>
- </layer>
- <layer name="osso pequeno" width="50" height="50" visible="0">
-  <data encoding="base64" compression="zlib">
-   eJztz1EJACAQBcEXXiPYVwQj+OEdM7ABNgEAAAAAAAAAgDfGrbKZ+g/HSo+PDg9Hl4/fbcgbBDM=
-  </data>
- </layer>
- <layer name="osso medio" width="50" height="50" visible="0">
-  <data encoding="base64" compression="zlib">
-   eJzt0LEJADAMBDEv7xGyb1rjOgQeJLgFrgoAAAAAAAAAAN7pVaqzSpT8f0r9z38X3IwFgw==
-  </data>
- </layer>
- <layer name="buraco" width="50" height="50" visible="0">
-  <data encoding="base64" compression="zlib">
-   eJztwQENAAAAwqD3T20ON6AAAAAAAAAAAADg3wAnEAAB
-  </data>
- </layer>
- <layer name="pedra" width="50" height="50" visible="0">
-  <data encoding="base64" compression="zlib">
-   eJzdmdtKBDEMhvsMgojHxQMOnlb0Th/OC31xt7DBn9gcmmbGwUBwWTttvk6SJt1SSvkscbka1LOd3gf0AuaY9rYQx9fCHJXhwbnOIfytesnmGpVRhkOYCz9LHCTZHL2+QH5EDBkcR6MQjvVxTF37Whl/vNMTQU/LDzf3qywOj3g4uK+g0nPIMZXlOchOzoHvYFt0DpI54pwL2kW+QHJXfsd2tceTezGeluDA+TUfwvHXxphWPsB1NiFLbbtaPt2yCWNGk9Ze/MX70HSE47ksw/FY5DyKsb329+FVi8NaZzLGRsTLsSn/g6P3fbTiaim/mkouh7ROVSsOe1U7kzPeh8QR7WOwl+mdA3sgLa+97PRpr6/GfrVyvFcoh3vPY5qb9hLzP9da+70Bx/v+O28dKbFoObw333hyAc2pxbbEodX/VPctzeF9Djms2pP30hIH3w/Of6esIa2lPXfR4OjZW4mD71vknOsR3tdY/Vorh09lvRwkVsxQ7uP1+Ro5vL68Zg4uWh/B5/Wcc5k1hJej54yM1Iqjyjky9q7uz0i9E6mPcP9xH0ft8N7b9krLn7kf8d66Z+6R/4/KEhza2S7ldH7+W+LlsOqunlhBf6s5/Zwp9/UMDuk86I2favsBaI9NEQ4882jfpHqZr+WxMWJT5BnvucY5DhxKNU4rPvC7DA5tnMbhjR9+53azn+s2gcN756dxeO/MeZxncrTOeO89Pl+7t7/P5GjZjDZ67iCsvkWSTI7IHbE0D42t8cLPBVKM6WyOD0U9MYx1s9XnzxUfFocnhqJ9/ho4uN2Y93h+lXqvNXJEzhfK55yjtweifWvZXxI5rP6Qv8vIfXEGR+sugte1vTZZvyuiZPkV/v7qXbslkbvAOTgyZK76SvpdZq67nG1w7m/e/8KE
-  </data>
- </layer>
- <layer name="esqueleto completo" width="50" height="50" visible="0">
-  <data encoding="base64" compression="zlib">
-   eJzt08ENQEAQhtHd6ET/TaACVIAKRAMmcXHfw4S8l3z3fw5TCgAAAAAAAAAAmfpXXzZEYzRlD2k0R0u0Zg9ptEV7dGQPaXSW5zeu7CGNan3u6Gr2kn+7ASjMCfc=
-  </data>
- </layer>
- <layer name="esqueleto" width="50" height="50" visible="0">
-  <data encoding="base64" compression="zlib">
-   eJztmktu2zAQhmnkDEbQNA+kTmPkZbfdtedTDxAXPkBem+yCJJvs8jpA0vYAdU9Q9AKdgTjwdEBKIjm0tPAH/CAjkRTHJEccRsakUVg9gZ7Z9XPQhc3Tva9CMcjnaEF2/AD9ZNdvQLc2T/emQjHI52hxDJqAvkXku8QJ6BR0FpHvElc2vbb5guVNTX5Ju8T6qK4R66OWtMuw4bUmFCkdiaBv6vs6sWmsTU0h2zX2DkMhZOIv/t/ztUjdO2B/se8frLR//35kvXXQBmgzsN5EpFq47Ggylju23K7xzzk5d4aOe1VozilfW4egI9DIzOdc3Rrqe/IcHhu0hWsN0XpAXOPB7yM8NugC96AH0CPoLegNaE2Irvvq5SB0rr6AXkHfQQPQNugj6BNL6Tr3GbxeKDnioF+gGei3mff3M+gLSwe2LPqMsSl9Bq8XSo446I9N/5qyv3ugfaEDW4b7DF5PUudHcsRBvV6ZrvTK/vY9qqon0Yzjx0rtxKB1rhL7DtdCazxwPWLctKvQVgxa48HXIyLP4DTlInU8ZLu5YwUfqeNBMbhvjfP2qcyWKLNq5bqH4G/zzqqwqSTXuWNq+7QnRL9BPoTUli+JgfaE+K5HH8L9YVu+hBM6j8kO1HtT2uCyY9FnZaHzjOzg/jD3eOT4TdAOsoE08pStOvcL2WvkOD9EOy6FXP7KB70HQuZz7LlEFbgXvhPajmgnZD7nsKOKJvEbj+k15/2DYltN4DG95rx/VWyrTVLsWPQZdNXz6+xou69NWc6rcHKer6bakeI7KSagbxlScNlR1Tf5PO09A493QmyTdqAN2Dd+3iPPQ3Miv4Vxseq4NhN/T219bseeUh+bIL+FiYWPhzH+vc2i9zyh0Hh0lZA14xtP7f+vdZF/Tsi6oQ==
-  </data>
- </layer>
- <layer name="cabeça" width="50" height="50" visible="0">
-  <data encoding="base64" compression="zlib">
-   eJzt2bENgDAQBEE34f4T6AD6w4klEiIMr5NmpMv3428NAL63je3VEQscY2d1RLheHbBI2h1PvWl3TP22NInNAAAAAAAAvOdv/o8LmRwGDQ==
-  </data>
- </layer>
- <layer name="peças" width="50" height="50" visible="0">
-  <data encoding="base64" compression="zlib">
-   eJztz6ENADAMA8HsDzNxeUlI1MrSHTF9VwEAvNO/A5ak/UjrnfS1SRKbAQAAAAAAIMUBL9UDbQ==
+   eJzt0cEJACAMBMHUYCX2X51v/RoQjxm4f5ZUAQAAkGIc+1VKBwAAAAA95usD2CT+I6UppQNuLGYvAVE=
   </data>
  </layer>
  <objectgroup name="peças">
-  <object id="130" name="peca1" x="1152" y="449" width="32.6667" height="32"/>
-  <object id="131" x="1184.33" y="383.667" width="31.3333" height="32"/>
-  <object id="132" x="1248.33" y="417.333" width="31.3333" height="31"/>
-  <object id="133" x="1312.67" y="416" width="31.6667" height="31.6667"/>
-  <object id="134" x="1376" y="352.333" width="32.3333" height="31.3333"/>
-  <object id="135" x="1375.67" y="320" width="32" height="32.3333"/>
-  <object id="162" x="191.333" y="1440" width="32" height="30.6667"/>
-  <object id="163" x="190.667" y="1471.33" width="34" height="32.6667"/>
-  <object id="164" x="96" y="1344" width="31.3333" height="31.3333"/>
-  <object id="165" x="97.3333" y="1409.67" width="29.6667" height="29.6667"/>
-  <object id="166" x="257.667" y="1409" width="27.6667" height="29"/>
- </objectgroup>
- <objectgroup name="portao" visible="0">
-  <object id="137" x="1213.33" y="544.667" width="140" height="121.333"/>
-  <object id="138" x="1186" y="578" width="27.3333" height="65.3333"/>
-  <object id="139" x="1191.64" y="643.818" width="22.5455" height="6.90909"/>
-  <object id="140" x="1194.18" y="651.091" width="19.2727" height="9.45455"/>
-  <object id="141" x="1206.36" y="661.273" width="8.18182" height="4.18182"/>
-  <object id="142" x="1343.64" y="652.182" width="17.6364" height="7.27273"/>
-  <object id="143" x="1332.73" y="627.273" width="34.1818" height="26.5455"/>
-  <object id="144" x="1321.45" y="612.545" width="51.6364" height="27.0909"/>
-  <object id="145" x="1341.82" y="558.545" width="34.1818" height="35.0909"/>
-  <object id="146" x="1189.45" y="571.091" width="25.0909" height="8"/>
-  <object id="147" x="1197.45" y="563.091" width="18.3636" height="8.36364"/>
-  <object id="148" x="1204.36" y="553.455" width="14.5455" height="10"/>
-  <object id="149" x="1210.18" y="547.636" width="14.1818" height="9.09091"/>
-  <object id="150" x="1251.09" y="663.273" width="24.9091" height="7.81818"/>
-  <object id="151" x="1219.64" y="662.909" width="24.7273" height="8.72727"/>
-  <object id="152" x="1284.36" y="662.909" width="23.6364" height="7.63636"/>
-  <object id="153" x="1315.64" y="663.455" width="24.9091" height="8.72727"/>
-  <object id="155" x="210.182" y="1375.27" width="17.6364" height="24.3636"/>
- </objectgroup>
- <objectgroup name="Paredes" visible="0">
-  <object id="156" x="212" y="1345.64" width="15.6364" height="18.7273"/>
- </objectgroup>
- <objectgroup name="Pedra" visible="0">
-  <object id="157" x="217.091" y="1318.91" width="18.5455" height="20.9091"/>
- </objectgroup>
- <objectgroup name="Osso" visible="0">
-  <object id="158" x="217" y="1290" width="20" height="19"/>
+  <object id="167" x="192.333" y="1441.33" width="30.6667" height="30.3333"/>
+  <object id="168" x="193" y="1473.67" width="29.6667" height="28"/>
+  <object id="169" x="96.6667" y="1409.33" width="29.6667" height="29"/>
+  <object id="170" x="97" y="1344.67" width="29.3333" height="30.6667"/>
  </objectgroup>
 </map>

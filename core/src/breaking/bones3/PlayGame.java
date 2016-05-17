@@ -25,6 +25,7 @@ public class PlayGame extends Game {
 	public static final short PEDRA_BIT = 4;
 	public static final short OSSO_BIT = 8;
 	public static final short DOOR_BIT = 8;
+	public static final short CORACAO_BIT = 4;
 	public static final short DESTROY_BIT = 16;
 
 
