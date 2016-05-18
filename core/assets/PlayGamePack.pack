@@ -1,0 +1,33 @@
+
+PlayGamePack.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+zelda
+  rotate: false
+  xy: 1, 327
+  size: 800, 600
+  orig: 800, 600
+  offset: 0, 0
+  index: -1
+inimigo1
+  rotate: false
+  xy: 1, 133
+  size: 128, 192
+  orig: 128, 192
+  offset: 0, 0
+  index: -1
+inimigo2
+  rotate: false
+  xy: 803, 735
+  size: 128, 192
+  orig: 128, 192
+  offset: 0, 0
+  index: -1
+playerr
+  rotate: false
+  xy: 1, 1
+  size: 97, 130
+  orig: 97, 130
+  offset: 0, 0
+  index: -1

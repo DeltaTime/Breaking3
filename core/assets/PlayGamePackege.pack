@@ -1,0 +1,54 @@
+
+PlayGamePackege.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+InimigoCostas
+  rotate: false
+  xy: 1, 199
+  size: 97, 31
+  orig: 97, 31
+  offset: 0, 0
+  index: -1
+InimigoDireita
+  rotate: false
+  xy: 1, 166
+  size: 97, 31
+  orig: 97, 31
+  offset: 0, 0
+  index: -1
+InimigoFrente
+  rotate: false
+  xy: 1, 133
+  size: 97, 31
+  orig: 97, 31
+  offset: 0, 0
+  index: -1
+PlayerCostas
+  rotate: false
+  xy: 1, 100
+  size: 97, 31
+  orig: 97, 31
+  offset: 0, 0
+  index: -1
+PlayerDireita
+  rotate: false
+  xy: 1, 67
+  size: 97, 31
+  orig: 97, 31
+  offset: 0, 0
+  index: -1
+playerFrente
+  rotate: false
+  xy: 1, 34
+  size: 97, 31
+  orig: 97, 31
+  offset: 0, 0
+  index: -1
+pocao
+  rotate: false
+  xy: 1, 1
+  size: 97, 31
+  orig: 97, 31
+  offset: 0, 0
+  index: -1

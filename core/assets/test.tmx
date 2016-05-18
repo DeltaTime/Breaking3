@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="250" height="250" tilewidth="16" tileheight="16" nextobjectid="9">
+ <tileset firstgid="1" name="Bones_C" tilewidth="16" tileheight="16" spacing="2" margin="1" tilecount="1530" columns="45">
+  <image source="Bones_C.png" width="812" height="616"/>
+ </tileset>
+ <layer name="Background" width="250" height="250">
+  <data encoding="base64" compression="zlib">
+   eJztwwENAAAMw6D6NzR7F3JIWDVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV1ccPMnGP7w==
+  </data>
+ </layer>
+ <layer name="imagens" width="250" height="250">
+  <data encoding="base64" compression="zlib">
+   eJzt10EJADAMA8DWv4wanYdByaN3CvIJIVUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACQM51OAAD8sOFwi84DAABAnn8OAAAA+x6fGQKR
+  </data>
+ </layer>
+ <objectgroup name="Coracao">
+  <object id="5" x="80.3333" y="3857.33" width="15" height="13.6667"/>
+  <object id="6" x="128.667" y="3873.33" width="14.6667" height="14.6667"/>
+  <object id="7" x="129.333" y="3825.33" width="13" height="14.3333"/>
+  <object id="8" x="128.333" y="3937" width="14.6667" height="14.6667"/>
+ </objectgroup>
+</map>
