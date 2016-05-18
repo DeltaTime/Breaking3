@@ -22,7 +22,7 @@ public class Player extends Sprite {
     public enum State{WALKING, STANDING}
     public State currentState;
     public State previousState;
-    public World word;
+    public World world;
     public Body b2body;
     private TextureRegion playerStands;
     private Animation playWalkink;
@@ -31,9 +31,9 @@ public class Player extends Sprite {
     private boolean walkingRight;
 
 
-    public Player(World world, PlayScreen screen){
+    public Player(PlayScreen screen){
         super(screen.getAtlas().findRegion("PlayerDireita"));
-        this.word = world;
+        this.world = screen.getWorld();
         currentState = State.STANDING;
         previousState = State.STANDING;
         stateTimer = 0;
@@ -41,8 +41,9 @@ public class Player extends Sprite {
 
         Array<TextureRegion> frames = new Array<TextureRegion>();
         //andar aimation
-        for(int i = 3; i < 6; i++){
-            frames.add(new TextureRegion(getTexture(),i * 32,0,31,31));//busca os frames de 31 pixel na imagem
+        for(int i = 0; i < 3; i++){
+            //frames.add(new TextureRegion(getTexture(),i * 32,0,31,31));//busca os frames de 31 pixel na imagem
+            frames.add(new TextureRegion(screen.getAtlas().findRegion("PlayerDireita"), i * 32, 0, 32, 32));
         }
 
         playWalkink = new Animation(0.1f,frames);
@@ -109,14 +110,14 @@ public class Player extends Sprite {
         BodyDef bdef = new BodyDef();
         bdef.position.set(32/PlayGame.PPM,32/PlayGame.PPM);
         bdef.type = BodyDef.BodyType.DynamicBody;
-        b2body = word.createBody(bdef);
+        b2body = world.createBody(bdef);
 
         FixtureDef fdef = new FixtureDef();
         CircleShape shape = new CircleShape();
         shape.setRadius(9/ PlayGame.PPM);
         fdef.filter.categoryBits = PlayGame.PLAYER_BIT;
         // player pode colidir
-        fdef.filter.maskBits = PlayGame.DEFAULT_BIT | PlayGame.DOOR_BIT | PlayGame.PECAS_BIT | PlayGame.PEDRA_BIT | PlayGame.OSSO_BIT | PlayGame.CORACAO_BIT;
+        fdef.filter.maskBits = PlayGame.GROUND_BIT | PlayGame.DOOR_BIT | PlayGame.PECAS_BIT | PlayGame.PEDRA_BIT | PlayGame.OSSO_BIT | PlayGame.CORACAO_BIT | PlayGame.PAREDE_BIT | PlayGame.ENEMY_BIT | PlayGame.OBJECT_BIT |PlayGame.ENEMY_COLISION_COLISION;
 
         fdef.shape = shape;
         b2body.createFixture(fdef);

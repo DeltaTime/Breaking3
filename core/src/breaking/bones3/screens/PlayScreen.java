@@ -3,6 +3,7 @@ package breaking.bones3.screens;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
@@ -28,6 +29,7 @@ import com.badlogic.gdx.Input;
 
 import breaking.bones3.PlayGame;
 import breaking.bones3.scenes.Hud;
+import breaking.bones3.sprites.Enemy1;
 import breaking.bones3.sprites.Player;
 import breaking.bones3.tools.B2WorldCreator;
 import breaking.bones3.tools.WorldContactListener;
@@ -36,7 +38,11 @@ import breaking.bones3.tools.WorldContactListener;
  * Created by wolos on 11/05/2016.
  */
 public class PlayScreen implements Screen {
+    //Sprites
     private Player player;
+    private Enemy1 enemy1;
+
+
     private PlayGame game;
 
     private TextureAtlas atlas;
@@ -55,10 +61,13 @@ public class PlayScreen implements Screen {
     private World world;
     private Box2DDebugRenderer b2dr;
 
+    //sounds
+    private Music music;
+
     public PlayScreen(PlayGame game){
         this.game = game;
 
-        atlas = new TextureAtlas("Player.pack");
+        atlas = new TextureAtlas("PlayGamePackege.pack");
 
         //Camera seguir o jogador
         gameCam = new OrthographicCamera();
@@ -69,7 +78,7 @@ public class PlayScreen implements Screen {
 
         //carregar o map e configurar
         mapLoader = new TmxMapLoader();
-        map = mapLoader.load("test.tmx");
+        map = mapLoader.load("cavernaesqueletomap2.tmx");
         renderer = new OrthogonalTiledMapRenderer(map,1/PlayGame.PPM);
 
         //centralizar a camera
@@ -80,11 +89,18 @@ public class PlayScreen implements Screen {
         b2dr = new Box2DDebugRenderer();
 
         //criar o mundo com objetos
-        new B2WorldCreator(world,map);
+        new B2WorldCreator(this);
 
 
-        player = new Player(world, this);
+        player = new Player(this);
         world.setContactListener(new WorldContactListener());
+
+        //Play MUSIC
+       // music = PlayGame.maneger.get("audio/music/mario_music.ogg", Music.class);
+        //music.setLooping(true);
+       //music.play();
+
+        enemy1 = new Enemy1(this,.32f,.32f);
 
     }
 
@@ -132,6 +148,8 @@ public class PlayScreen implements Screen {
         handleInput(dt);
         world.step(1/60f,6,2);
         player.update(dt);
+        enemy1.update(dt);
+        hud.update(dt);
 
         // fixar a camera com o player
         gameCam.position.x = player.b2body.getPosition().x;
@@ -165,6 +183,7 @@ public class PlayScreen implements Screen {
         game.batch.setProjectionMatrix(gameCam.combined);
         game.batch.begin();
         player.draw(game.batch);
+        enemy1.draw(game.batch);
         game.batch.end();
 
 
@@ -173,6 +192,15 @@ public class PlayScreen implements Screen {
 
 
     }
+
+    public TiledMap getMap(){
+        return map;
+    }
+
+    public  World getWorld(){
+        return world;
+    }
+
 
     @Override
     public void resize(int width, int height) {

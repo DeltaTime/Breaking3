@@ -6,7 +6,10 @@ import com.badlogic.gdx.physics.box2d.ContactListener;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.Manifold;
 
+import breaking.bones3.PlayGame;
+import breaking.bones3.sprites.Enemy;
 import breaking.bones3.sprites.InteractiveTileObject;
+import breaking.bones3.sprites.Player;
 
 /**
  * Created by wolos on 16/05/2016.
@@ -17,6 +20,20 @@ public class WorldContactListener implements ContactListener{
     public void beginContact(Contact contact) {
         Fixture fixA = contact.getFixtureA();
         Fixture fixB = contact.getFixtureB();
+
+        int cDef = fixA.getFilterData().categoryBits | fixB.getFilterData().categoryBits;
+        switch (cDef){
+            case PlayGame.ENEMY_COLISION_COLISION | PlayGame.PLAYER_BIT:
+                if(fixA.getFilterData().categoryBits == PlayGame.ENEMY_COLISION_COLISION)
+                    ((Enemy)fixA.getUserData()).hitonColision((Player) fixB.getUserData());
+                else if(fixB.getFilterData().categoryBits == PlayGame.ENEMY_COLISION_COLISION)
+                    ((Enemy)fixA.getUserData()).hitonColision((Player) fixB.getUserData());
+
+        }
+
+
+
+
 
         if(fixA.getUserData() == "espada" || fixB.getUserData() == "espada"){
             Fixture espada = fixA.getUserData() == "espada" ? fixA : fixB;

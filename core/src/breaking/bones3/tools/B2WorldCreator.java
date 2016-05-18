@@ -10,35 +10,59 @@ import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
 
-import breaking.bones3.sprites.Coracao;
-import breaking.bones3.sprites.Doors;
-import breaking.bones3.sprites.Collision;
-import breaking.bones3.sprites.Osso;
+import breaking.bones3.PlayGame;
+import breaking.bones3.screens.PlayScreen;
+import breaking.bones3.sprites.Bau;
 import breaking.bones3.sprites.Parede;
-import breaking.bones3.sprites.Pecas;
-import breaking.bones3.sprites.Pedra;
 
 /**
  * Created by wolos on 12/05/2016.
  */
 public class B2WorldCreator {
-    public B2WorldCreator(World world, TiledMap map){
+    public B2WorldCreator(PlayScreen screen){
+        World world = screen.getWorld();
+        TiledMap map = screen.getMap();
+        //create body and fixture variables
         BodyDef bdef = new BodyDef();
         PolygonShape shape = new PolygonShape();
         FixtureDef fdef = new FixtureDef();
         Body body;
 
 
-
-
-
-
-        //creat the pecas
-        for(MapObject object : map.getLayers().get(2).getObjects().getByType(RectangleMapObject.class)){
+        //CHAO PAREDES
+        for(MapObject object : map.getLayers().get(3).getObjects().getByType(RectangleMapObject.class)){
             Rectangle rect = ((RectangleMapObject) object).getRectangle();
-            new Coracao(world, map, rect);
+
+            bdef.type = BodyDef.BodyType.StaticBody;
+            bdef.position.set((rect.getX() + rect.getWidth() / 2) / PlayGame.PPM, (rect.getY() + rect.getHeight() / 2) / PlayGame.PPM);
+
+            body = world.createBody(bdef);
+
+            shape.setAsBox(rect.getWidth() / 2 / PlayGame.PPM, rect.getHeight() / 2 / PlayGame.PPM);
+            fdef.shape = shape;
+            fdef.filter.categoryBits = PlayGame.OBJECT_BIT;
+            body.createFixture(fdef);
+        }
+
+
+        //Parede
+        for(MapObject object : map.getLayers().get(3).getObjects().getByType(RectangleMapObject.class)){
+            Rectangle rect = ((RectangleMapObject) object).getRectangle();
+            new Parede(screen, rect);
+        }
+
+        //create bau
+        for(MapObject object : map.getLayers().get(4).getObjects().getByType(RectangleMapObject.class)){
+            Rectangle rect = ((RectangleMapObject) object).getRectangle();
+            new Bau(screen, rect);
+
 
         }
+
+
+
+
+
 
 
 

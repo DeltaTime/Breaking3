@@ -78,11 +78,11 @@ public class TelaAbertura implements Screen{
         game.batch.begin();
         imgdeltatime.draw(game.batch);
         game.batch.end();
-        
-        
-        
-        
-        if(TimeUtils.millis()> starttime+5000){
+
+
+
+
+        if(Gdx.input.isTouched()){
             game.setScreen(new Menu(game));
             dispose();
         }

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="left-down" width="50" height="50" tilewidth="16" tileheight="16" nextobjectid="79">
+<map version="1.0" orientation="orthogonal" renderorder="left-down" width="50" height="50" tilewidth="16" tileheight="16" nextobjectid="81">
  <tileset firstgid="1" name="Bones_C" tilewidth="16" tileheight="16" tilecount="1900" columns="50">
   <image source="Bones_C.png" width="812" height="616"/>
+ </tileset>
+ <tileset firstgid="1901" name="pset" tilewidth="16" tileheight="16" spacing="2" margin="1" tilecount="408" columns="17">
+  <image source="pset.png" width="309" height="446"/>
  </tileset>
  <layer name="background" width="50" height="50">
   <data encoding="base64" compression="zlib">
@@ -83,5 +86,11 @@
   <object id="69" x="512" y="625.333" width="48" height="29.3333"/>
   <object id="70" x="13.3333" y="190.667" width="177.333" height="16"/>
   <object id="72" x="177.333" y="62.6667" width="13.3333" height="130.667"/>
+ </objectgroup>
+ <objectgroup name="Bau">
+  <object id="79" x="16.25" y="768" width="15.75" height="15.875"/>
+ </objectgroup>
+ <objectgroup name="Osso">
+  <object id="80" x="16" y="624.125" width="16.0625" height="15.875"/>
  </objectgroup>
 </map>
