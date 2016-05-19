@@ -1,5 +1,6 @@
 package breaking.bones3.sprites;
 
+import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TiledMapTile;
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
@@ -18,7 +19,7 @@ import breaking.bones3.screens.PlayScreen;
 /**
  * Created by wolos on 12/05/2016.
  */
-public abstract class InteractiveTileObject {
+public abstract class InteractiveTileObject extends Sprite {
 
     protected World world;
     protected TiledMap map;

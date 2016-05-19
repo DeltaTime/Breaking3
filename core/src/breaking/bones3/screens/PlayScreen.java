@@ -29,6 +29,7 @@ import com.badlogic.gdx.Input;
 
 import breaking.bones3.PlayGame;
 import breaking.bones3.scenes.Hud;
+import breaking.bones3.sprites.Bloco;
 import breaking.bones3.sprites.Enemy1;
 import breaking.bones3.sprites.Player;
 import breaking.bones3.tools.B2WorldCreator;
@@ -41,6 +42,7 @@ public class PlayScreen implements Screen {
     //Sprites
     private Player player;
     private Enemy1 enemy1;
+    private Bloco bloco;
 
 
 
@@ -106,6 +108,9 @@ public class PlayScreen implements Screen {
 
         enemy1 = new Enemy1(this,1.0f,1.0f);
 
+        //OBJETOS
+        bloco = new Bloco(this,1.0f,1.5f);
+
 
     }
 
@@ -156,6 +161,7 @@ public class PlayScreen implements Screen {
         player.update(dt);
         enemy1.update(dt);
         hud.update(dt);
+        bloco.update(dt);
 
         // fixar a camera com o player
         gameCam.position.x = player.b2body.getPosition().x;
@@ -190,6 +196,7 @@ public class PlayScreen implements Screen {
         game.batch.begin();
         player.draw(game.batch);
         enemy1.draw(game.batch);
+        bloco.draw(game.batch);
         game.batch.end();
 
 
