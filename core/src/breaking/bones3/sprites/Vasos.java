@@ -12,13 +12,13 @@ import breaking.bones3.scenes.Hud;
 import breaking.bones3.screens.PlayScreen;
 
 /**
- * Created by wolos on 16/05/2016.
+ * Created by wolos on 19/05/2016.
  */
-public class Bau extends InteractiveTileObject {
+public class Vasos extends InteractiveTileObject {
 
     private static TiledMapTileSet tileSet;
     private final int BLANK_OBJECT = 44; // tem q pegar do mesmo tile set ID do tile
-    public Bau(PlayScreen screen, Rectangle bounds){
+    public Vasos(PlayScreen screen, Rectangle bounds){
         super(screen,bounds);
         tileSet = map.getTileSets().getTileSet("Bones_C");
         fixture.setUserData(this);
@@ -26,10 +26,10 @@ public class Bau extends InteractiveTileObject {
     }
     @Override
     public void onEspadaHit() {
-        Gdx.app.log("Colisao", "Bau");
-        //setCategoryFilter(PlayGame.DESTROY_BIT); // destroi
-       //getCell().setTile(null); // desaparece a figura
-        getCell().setTile(tileSet.getTile(363));
+        Gdx.app.log("Colisao", "Vaso");
+        setCategoryFilter(PlayGame.DESTROY_BIT); // destroi
+        getCell().setTile(null); // desaparece a figura
+        //getCell().setTile(tileSet.getTile(363));
         //Hud.addScore(0);
         PlayGame.maneger.get("audio/sfx/breakblock.wav", Sound.class).play();
 

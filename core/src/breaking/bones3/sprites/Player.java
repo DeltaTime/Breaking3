@@ -38,6 +38,8 @@ public class Player extends Sprite {
         previousState = State.STANDING;
         stateTimer = 0;
         walkingRight = true;
+        super.setPosition(1.0f,4.0f);
+
 
         Array<TextureRegion> frames = new Array<TextureRegion>();
         //andar aimation
@@ -108,7 +110,7 @@ public class Player extends Sprite {
 
     public void definePlayer(){
         BodyDef bdef = new BodyDef();
-        bdef.position.set(32/PlayGame.PPM,32/PlayGame.PPM);
+        bdef.position.set(16/PlayGame.PPM,16/PlayGame.PPM);
         bdef.type = BodyDef.BodyType.DynamicBody;
         b2body = world.createBody(bdef);
 
@@ -127,6 +129,7 @@ public class Player extends Sprite {
         fdef.shape = espada;
         fdef.isSensor = true;
         b2body.createFixture(fdef).setUserData("espada");
+
 
     }
 

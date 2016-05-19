@@ -43,6 +43,7 @@ public class PlayScreen implements Screen {
     private Enemy1 enemy1;
 
 
+
     private PlayGame game;
 
     private TextureAtlas atlas;
@@ -93,6 +94,9 @@ public class PlayScreen implements Screen {
 
 
         player = new Player(this);
+
+
+
         world.setContactListener(new WorldContactListener());
 
         //Play MUSIC
@@ -100,7 +104,8 @@ public class PlayScreen implements Screen {
         //music.setLooping(true);
        //music.play();
 
-        enemy1 = new Enemy1(this,.32f,.32f);
+        enemy1 = new Enemy1(this,1.0f,1.0f);
+
 
     }
 
@@ -116,6 +121,7 @@ public class PlayScreen implements Screen {
     }
 
     public void handleInput(float dt){
+        //deixa ele parado qdo nao estiver imput
         player.b2body.setLinearVelocity(0,0);
 
         if(Gdx.input.isKeyPressed(Input.Keys.LEFT)&& player.b2body.getLinearVelocity().x >= -0.8) {

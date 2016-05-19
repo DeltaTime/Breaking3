@@ -14,6 +14,7 @@ import breaking.bones3.PlayGame;
 import breaking.bones3.screens.PlayScreen;
 import breaking.bones3.sprites.Bau;
 import breaking.bones3.sprites.Parede;
+import breaking.bones3.sprites.Vasos;
 
 /**
  * Created by wolos on 12/05/2016.
@@ -51,13 +52,26 @@ public class B2WorldCreator {
             new Parede(screen, rect);
         }
 
-        //create bau
+        //Bau
         for(MapObject object : map.getLayers().get(4).getObjects().getByType(RectangleMapObject.class)){
             Rectangle rect = ((RectangleMapObject) object).getRectangle();
             new Bau(screen, rect);
-
-
         }
+
+        //Vasos
+        for(MapObject object : map.getLayers().get(5).getObjects().getByType(RectangleMapObject.class)){
+            Rectangle rect = ((RectangleMapObject) object).getRectangle();
+            new Vasos(screen, rect);
+        }
+
+
+
+
+
+
+
+
+
 
 
 

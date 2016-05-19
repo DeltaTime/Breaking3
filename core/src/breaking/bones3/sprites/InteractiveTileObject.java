@@ -47,7 +47,7 @@ public abstract class InteractiveTileObject {
 
     }
 
-    public abstract void onEspadaHit();
+    public abstract void onEspadaHit(); // COLISAO
 
     public void setCategoryFilter (short filterBit){
         Filter filter = new Filter();
@@ -61,7 +61,6 @@ public abstract class InteractiveTileObject {
         TiledMapTileLayer layer = (TiledMapTileLayer) map.getLayers().get(2); // esqueleto grande exemplo da layer
         return layer.getCell((int)(body.getPosition().x * PlayGame.PPM /16),
                 (int)(body.getPosition().y * PlayGame.PPM / 16));
-
 
     }
 
