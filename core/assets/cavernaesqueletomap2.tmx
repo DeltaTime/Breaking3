@@ -42,7 +42,7 @@
   <object id="19" x="558.667" y="334.667" width="49.3333" height="61.3333"/>
   <object id="20" x="704" y="337.333" width="81.3333" height="61.3333"/>
   <object id="21" x="752" y="65.3333" width="33.3333" height="270.667"/>
-  <object id="22" x="672" y="142.667" width="78.6667" height="29.3333"/>
+  <object id="22" x="672" y="142.667" width="78.6667" height="33.333"/>
   <object id="23" x="16" y="240" width="448" height="30.6667"/>
   <object id="24" x="64" y="318.667" width="174.667" height="33.3333"/>
   <object id="25" x="145.333" y="385.333" width="173.333" height="62.6667"/>
@@ -60,15 +60,15 @@
   <object id="40" x="672" y="320" width="30.6667" height="32"/>
   <object id="41" x="608" y="320" width="30.6667" height="30.6667"/>
   <object id="42" x="557.333" y="272" width="18.6667" height="16"/>
-  <object id="43" x="624" y="272" width="16" height="16"/>
-  <object id="44" x="672" y="273.333" width="14.6667" height="14.6667"/>
+  <object id="43" x="625" y="274" width="13.5" height="13"/>
+  <object id="44" x="673" y="274.333" width="13.5" height="12.167"/>
   <object id="45" x="672" y="225.333" width="30.6667" height="28"/>
   <object id="46" x="608" y="224" width="29.3333" height="30.6667"/>
   <object id="47" x="638.667" y="225.333" width="34.6667" height="12"/>
-  <object id="48" x="593.333" y="193.333" width="13.3333" height="13.3333"/>
-  <object id="49" x="560" y="209.333" width="14.6667" height="13.3333"/>
-  <object id="50" x="704" y="192" width="14.6667" height="14.6667"/>
-  <object id="51" x="737.333" y="209.333" width="16" height="16"/>
+  <object id="48" x="594.333" y="193.333" width="11.667" height="11.167"/>
+  <object id="49" x="560" y="210.333" width="13" height="12.167"/>
+  <object id="50" x="706" y="194" width="11.5" height="11.5"/>
+  <object id="51" x="737" y="210" width="13.333" height="12.333"/>
   <object id="52" x="480" y="528" width="78.6667" height="62.6667"/>
   <object id="53" x="558.667" y="528" width="64" height="30.6667"/>
   <object id="54" x="593.333" y="560" width="29.3333" height="224"/>
@@ -99,8 +99,6 @@
   <object id="84" x="96.2727" y="480" width="15.4545" height="15.9091"/>
   <object id="85" x="736.091" y="80.2727" width="15.5455" height="15.5455"/>
   <object id="86" x="144.125" y="16" width="15.8125" height="15.9375"/>
-  <object id="102" x="406.53" y="408" width="16.2727" height="16"/>
-  <object id="103" x="406.53" y="408" width="16.2727" height="16"/>
  </objectgroup>
  <objectgroup name="Porta">
   <object id="89" x="608.091" y="352.091" width="15.9091" height="15.9091"/>
