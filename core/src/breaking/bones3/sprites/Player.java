@@ -29,6 +29,7 @@ public class Player extends Sprite {
     private Animation playStand;
     private float stateTimer;
     private boolean walkingRight;
+    private int pontos;
 
 
     public Player(PlayScreen screen){
@@ -38,7 +39,7 @@ public class Player extends Sprite {
         previousState = State.STANDING;
         stateTimer = 0;
         walkingRight = true;
-        super.setPosition(1.0f,4.0f);
+        super.setPosition(600.0f,7.0f);
 
 
         Array<TextureRegion> frames = new Array<TextureRegion>();

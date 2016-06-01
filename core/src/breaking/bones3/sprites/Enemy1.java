@@ -22,6 +22,7 @@ public class Enemy1 extends Enemy {
     private Array<TextureRegion> frames;
     private boolean setToDestroy;
     private boolean destroyed;
+    private int vida = 100;
 
 
     @Override
@@ -87,6 +88,7 @@ public class Enemy1 extends Enemy {
         else if(!destroyed) {
             setPosition(b2body.getPosition().x - getWidth() / 2, b2body.getPosition().y - getHeight() / 2);
             setRegion(walkAnimation.getKeyFrame(stateTime, true));
+
         }
 
 

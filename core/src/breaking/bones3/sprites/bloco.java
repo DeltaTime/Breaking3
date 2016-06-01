@@ -23,6 +23,7 @@ public class Bloco extends ObjetosInterativos {
     private boolean destroyed;
 
 
+
     @Override
     protected void defineObjeto() {
         BodyDef bdef = new BodyDef();

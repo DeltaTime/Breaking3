@@ -16,6 +16,8 @@ import breaking.bones3.screens.PlayScreen;
  */
 public class Vasos extends InteractiveTileObject {
 
+    private int valor = 100;
+
     private static TiledMapTileSet tileSet;
     private final int BLANK_OBJECT = 44; // tem q pegar do mesmo tile set ID do tile
     public Vasos(PlayScreen screen, Rectangle bounds){
