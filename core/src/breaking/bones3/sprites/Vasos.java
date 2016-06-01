@@ -32,7 +32,7 @@ public class Vasos extends InteractiveTileObject {
         setCategoryFilter(PlayGame.DESTROY_BIT); // destroi
         getCell().setTile(null); // desaparece a figura
         //getCell().setTile(tileSet.getTile(363));
-        //Hud.addScore(0);
+        Hud.addScore(100);
         PlayGame.maneger.get("audio/sfx/breakblock.wav", Sound.class).play();
 
     }
