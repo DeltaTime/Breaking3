@@ -1,5 +1,7 @@
 package breaking.bones3.sprites;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.maps.tiled.TiledMapTileSet;
@@ -11,6 +13,7 @@ import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.utils.Array;
 
 import breaking.bones3.PlayGame;
+import breaking.bones3.scenes.Hud;
 import breaking.bones3.screens.PlayScreen;
 
 /**
@@ -75,6 +78,13 @@ public class Enemy1 extends Enemy {
         destroyed = false;
 
 
+    }
+
+    @Override
+    public void onEspadaHit() {
+        Gdx.app.log("Colisao", "Inimigo1");
+        Hud.addScore(500);
+        PlayGame.maneger.get("audio/sfx/breakblock.wav", Sound.class).play();
     }
 
     public void update(float dt) {
