@@ -28,9 +28,9 @@ public abstract class InteractiveTileObject extends Sprite {
     protected Body body;
     protected Fixture fixture;
 
-    public InteractiveTileObject(PlayScreen screen, Rectangle bounds){
-        this.world = screen.getWorld();
-        this.map = screen.getMap();
+    public InteractiveTileObject(World world, TiledMap map, Rectangle bounds){
+        this.world = world;
+        this.map = map;
         this.bounds = bounds;
         BodyDef bdef = new BodyDef();
         FixtureDef fdef = new FixtureDef();

@@ -6,17 +6,17 @@
  <tileset firstgid="7985" name="tileset bau" tilewidth="16" tileheight="16" tilecount="96" columns="12">
   <image source="tileset bau.png" width="192" height="128"/>
  </tileset>
- <layer name="Background" width="100" height="100">
+ <layer name="background" width="100" height="100">
   <data encoding="base64" compression="zlib">
    eJztmb1uE0EURqdzzXtQWdBBkVARKkwRQSpIBTwppUmeAGgQSiIKQID4mYgdeTKen92Vd/ZjfIpPe7Ie2eu5uWfvygfGmEObBzYH8Oz80ObI5hEswY9tVjZPYAlW6VMYXymySp/C+EqRVfoUxleKrNKnML5SZJU+hfGVIqv0KYyvFFmlT2F8pcgqfQrjK0VW6VMYXymySp/C+EqRVfoUxleKXKMHb99qI634au593FVa8dXc+7ir4Cut4Cut1NgrfNU/rfhKZZYs8XEhrfhK5dm3xKV6tOKrGt9jF1yqB77CV/gqnqNKe4Wv8JUq4ystdl6K1YH5ah5frSL1wFfzcqwWh5X2Cl9tM8+DGpy7l68q7RW+ujlfxWYttwZfaTwPujWt++qNzVkXBV89t3nWxa/H9d8nlfZqTl+tPb5jc7c7+hwew6TO515Pnbuux4tETivt1Zy+Wnt8z+Z+d/Q5PIZJnc+9njpXqkfrvlqPuF73vzwkfd//qdm46VWQ15X2SsVXfa/X/S/nnBZ6r+/7u/44TazZJ1/1vV63xzmnhd7r+/5+PWJr8FXaV+8WxrzP5MNis3bIfJW7V+CrbXZ7/Nnu96cuFzaXNlfeuY8LfFXTV349vth8tfmWqAe+mt5Xfj1+2fy2+ZOox1BfhTkx+Krkq+92v39m8mOxuZ/H3mcZOf/SbM+5btbdB1+dZXLe1Svmq77PIKlZODUXl/asdV+VeB0578+xpaRm4dRcXLqe1n1VYtcnsfjrc+tK8R1Yup7WfaXAb03aa0uDr2qzX4/Qa0uDr2qzXw98NS+7ewjz1biZNfW70tBj6rV9nq/GzKyp35WGHlOv4as4+/WYYv1YbtlXOfb3d4r1Y7llX+XY398p1o9lfIWv8BW+wlf4Cl/d/Pw+zx5TBF/FP3+ueuCrOt+jBrfiK1jLV7CWr2B89b+ySp/C+EqRVfoUxleKrNKnML5SZJU+hfGVIqv0KYyvFFmlT2F8pcgqfQrjK0VW6VMYXymySp/C+EqRVfoUxleKrNKn8D/+C4zyYV0=
   </data>
  </layer>
- <layer name="Background 2" width="100" height="100">
+ <layer name="background 2" width="100" height="100">
   <data encoding="base64" compression="zlib">
    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
   </data>
  </layer>
- <layer name="objetos" width="100" height="100">
+ <layer name="objeto" width="100" height="100">
   <data encoding="base64" compression="zlib">
    eJzt2TERADAIADGm2qgM/LuonHpg4TgSBb9/BAAAAAAAAAAAAAAAAAAAAAAAAAAAzPFOdwFQkbe7AAAAAAAAgCqfFgAAAAAAAAAAAICNPqthAhM=
   </data>
@@ -88,11 +88,12 @@
   <object id="71" x="988" y="878" width="18" height="17"/>
   <object id="72" x="1104" y="719" width="15" height="15"/>
  </objectgroup>
+ <objectgroup name="Bau">
+  <object id="77" x="1137" y="882" width="13" height="13"/>
+ </objectgroup>
  <objectgroup name="vasos">
   <object id="75" x="513" y="850" width="13" height="13"/>
   <object id="76" x="481" y="1154" width="12" height="12"/>
  </objectgroup>
- <objectgroup name="baus">
-  <object id="77" x="1137" y="882" width="13" height="13"/>
- </objectgroup>
+ <objectgroup name="Porta"/>
 </map>

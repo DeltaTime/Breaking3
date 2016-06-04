@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="60" height="60" tilewidth="16" tileheight="16" nextobjectid="28">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="60" height="60" tilewidth="16" tileheight="16" nextobjectid="29">
  <tileset firstgid="1" name="tileset casa" tilewidth="16" tileheight="16" tilecount="741" columns="39">
   <image source="tileset casa.png" width="624" height="304"/>
  </tileset>
@@ -13,7 +13,7 @@
    eJzt1rENwjAQhWG7QIgWZQgKCvoMQUHBJjQwDUwDq6DsQCRTRXAvNiKynf+TTjQX5Cf7ZDsHAAAAAAAAzIfvayXq8v5VveeJ155i09dO1M2FPKr3OvHaU+z7Oop6uJBX9d4nXnuK04iepwt5Ve/a/76efxuTt3Mh70L01ZK38WE+t6KvlrytD/N5EH215B2y7q3cpeS17q3cqTfEpz2z7q3cqTdEzJ6VML/qDTHcM+s81DC/wz2zzkMJ8xub1zoPJcyvyttF/FcJ86vyNhEZasjbzixvDPLmZ2nU2L5v3wAAAAAAAAC1ewHIkir5
   </data>
  </layer>
- <layer name="objetos" width="60" height="60">
+ <layer name="objeto" width="60" height="60">
   <data encoding="base64" compression="zlib">
    eJzt1TtLw1AYxvGTegO/gk4K3hcnd529fwpdVFBcveOi4KIO6iR4LS4KDjq6uQg6KTjoN3ARFPQ/pDSUpMbEND31+cFD0nIC79Nz2hojIiIiIiIiIiLyf82Refd+gSz6rFn1WWuTDceYL2IyxhxwOXTfPyLHPuvP3Gtube5ZW1wybwvztkacOc6zaXimbz/zDkScOc6zaZlm3pkiMy/FeNZGJ2kPUEZ2Kmxv/TTwnW8ky9yvpD3ML+177u88KaaXrn3klPtsYpMlq4pzWU1qQpzPMbqOO/nXt8mNlZgOenaSrgjfx7e/Hydxw/QcIaNu32J7dk8eSjFUCQXt2S6fxwfXTzLBmZ4kU07A4jLkMH+m4AzP/nCmm+jXTDbJFtm2qG8b3doL+u1V8H/qIN2GCvrdhOh7xZ6ukXVybdH+RvVCx3NyQV4t6hv1v7M+k+9r0/56f4ff3YTRTd9Hej5Ztr9Bekgtneoq+LdLREREREREREQkjm8+GzdS
   </data>
@@ -41,8 +41,11 @@
   <object id="23" x="513" y="496" width="125" height="48"/>
   <object id="24" x="624" y="545" width="15" height="85"/>
   <object id="26" x="560" y="561" width="65" height="70"/>
+  <object id="28" x="449" y="639" width="32" height="17"/>
  </objectgroup>
- <objectgroup name="baus">
+ <objectgroup name="Bau">
   <object id="27" x="337" y="449" width="13" height="13"/>
  </objectgroup>
+ <objectgroup name="vasos"/>
+ <objectgroup name="Porta"/>
 </map>

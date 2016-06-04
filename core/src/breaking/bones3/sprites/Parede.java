@@ -16,11 +16,13 @@ import breaking.bones3.screens.PlayScreen;
  */
 public class Parede extends InteractiveTileObject {
 
-    public Parede(PlayScreen screen, Rectangle bounds){
-        super(screen,bounds);
-         fixture.setUserData(this);
+    public Parede(World world, TiledMap map, Rectangle bounds){
+        super(world, map, bounds);
+        fixture.setUserData(this);
         setCategoryFilter(PlayGame.GROUND_BIT);
     }
+
+    
     @Override
     public void onEspadaHit() {
         Gdx.app.log("Colisao", "Parede");

@@ -13,6 +13,11 @@
    eJzt2ctNw0AQgOExdw4gXkLKjccpZ45QAdAAjwaAtAZUAFQAVAAdQAXMyolAYr0hWNbOzv6fNBekmDW/sOO1CAAAAAAAAAAAAAAAAAAA+IsDJ+NF6hyPe8wQx6m5x6bOeY9Z01nX2eh5nK3EGmvrcd1jdnR2dfZ6Hoce3z0s2BZ60CMfethCD1voYYv1HstCD0s9RtOZ93/ihfUe4+nQw5Z51y0vSukxkvS1y4tSeowlfe3yoqvHfs5FzVFjjzBH+ZaVVFuP8N7hROc047pSaukRrlFn0r53uNC5zLespFp6hHv4lbTvHW50JhnXlVJTjxLQw5bYs6EXJfaIPRt6UWKP2LOhFyX2+IketnjuYXmPpIvnHmEOxe4+SYznHtb3SWI89gj3jRL2SWK89ihhnyTGY48S7+MzHnuU+D13hh620MMWethCD1voYQs9bPHa46XQ8drjKfdC/uFB6JHDSiOy2vz+OT3yqL3Hm857nuVE1d7jQ+dzgN91q3Onc7/g52rv0ei5L0XOv6/w93uUxa+NtfcYyrO031FfF/wcPWyhhy219QjvBy336OKxBwAAAAAAAAAAAAAAAAAAQ/sC6PTHxA==
   </data>
  </layer>
+ <layer name="objeto" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T+1lC6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAbnEAAAQ==
+  </data>
+ </layer>
  <objectgroup name="paredes">
   <object id="1" x="512" y="448" width="246.667" height="14.6667"/>
   <object id="2" x="750.667" y="426.667" width="50.6667" height="12"/>
@@ -31,4 +36,7 @@
   <object id="19" x="429.333" y="1054.67" width="745.333" height="20"/>
   <object id="20" x="400" y="1170" width="800" height="36"/>
  </objectgroup>
+ <objectgroup name="Bau"/>
+ <objectgroup name="vasos"/>
+ <objectgroup name="Porta"/>
 </map>

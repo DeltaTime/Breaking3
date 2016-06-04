@@ -20,9 +20,14 @@ import breaking.bones3.sprites.Vasos;
  * Created by wolos on 12/05/2016.
  */
 public class B2WorldCreator {
-    public B2WorldCreator(PlayScreen screen){
-        World world = screen.getWorld();
-        TiledMap map = screen.getMap();
+    
+    private World world;
+    private TiledMap map;
+    
+    public B2WorldCreator(World world, TiledMap map){
+        this.world = world;
+        this.map = map;
+        
         //create body and fixture variables
         BodyDef bdef = new BodyDef();
         PolygonShape shape = new PolygonShape();
@@ -49,22 +54,22 @@ public class B2WorldCreator {
         //Parede
         for(MapObject object : map.getLayers().get(3).getObjects().getByType(RectangleMapObject.class)){
             Rectangle rect = ((RectangleMapObject) object).getRectangle();
-            new Parede(screen, rect);
+            new Parede(world, map, rect);
         }
 
         //Bau
         for(MapObject object : map.getLayers().get(4).getObjects().getByType(RectangleMapObject.class)){
             Rectangle rect = ((RectangleMapObject) object).getRectangle();
-            new Bau(screen, rect);
+            new Bau(world, map, rect);
         }
 
         //Vasos
         for(MapObject object : map.getLayers().get(5).getObjects().getByType(RectangleMapObject.class)){
             Rectangle rect = ((RectangleMapObject) object).getRectangle();
-            new Vasos(screen, rect);
+            new Vasos(world, map, rect);
         }
 
-
+        
 
 
 

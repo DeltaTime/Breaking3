@@ -20,8 +20,8 @@ public class Vasos extends InteractiveTileObject {
 
     private static TiledMapTileSet tileSet;
     private final int BLANK_OBJECT = 44; // tem q pegar do mesmo tile set ID do tile
-    public Vasos(PlayScreen screen, Rectangle bounds){
-        super(screen,bounds);
+    public Vasos(World world, TiledMap map, Rectangle bounds){
+        super(world, map, bounds);
         tileSet = map.getTileSets().getTileSet("Bones_C");
         fixture.setUserData(this);
         setCategoryFilter(PlayGame.PECAS_BIT);

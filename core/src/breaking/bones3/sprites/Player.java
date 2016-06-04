@@ -14,6 +14,7 @@ import com.badlogic.gdx.utils.Array;
 
 import breaking.bones3.PlayGame;
 import breaking.bones3.screens.PlayScreen;
+import breaking.bones3.screens.PlayScreenVila;
 
 /**
  * Created by wolos on 12/05/2016.
@@ -32,7 +33,7 @@ public class Player extends Sprite {
     private int pontos;
 
 
-    public Player(PlayScreen screen){
+    public Player(PlayScreenVila screen){
         super(screen.getAtlas().findRegion("PlayerDireita"));
         this.world = screen.getWorld();
         currentState = State.STANDING;

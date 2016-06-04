@@ -81,7 +81,7 @@ public class PlayScreen implements Screen {
 
         //carregar o map e configurar
         mapLoader = new TmxMapLoader();
-        map = mapLoader.load("cavernaesqueletomap2.tmx");
+        map = mapLoader.load("casamap.tmx");
         renderer = new OrthogonalTiledMapRenderer(map,1/PlayGame.PPM);
 
         //centralizar a camera
@@ -92,10 +92,12 @@ public class PlayScreen implements Screen {
         b2dr = new Box2DDebugRenderer();
 
         //criar o mundo com objetos
-        new B2WorldCreator(this);
+        new B2WorldCreator(world, map);
 
 
-        player = new Player(this);
+        //player = new Player(this);
+        // setar posição inicial
+        player.b2body.setTransform(5.70f, 5.70f, 0);
 
 
 
@@ -106,7 +108,7 @@ public class PlayScreen implements Screen {
         //music.setLooping(true);
        //music.play();
 
-        enemy1 = new Enemy1(this,1.0f,1.0f);
+        enemy1 = new Enemy1(this,0.0f,0.0f);
 
         //OBJETOS
         //bloco = new Bloco(this,1.0f,1.5f);
@@ -173,7 +175,8 @@ public class PlayScreen implements Screen {
         //renderizar tudo
         renderer.setView(gameCam);
 
-
+         System.out.println(player.getX());
+         System.out.println(player.getY());
 
 
     }

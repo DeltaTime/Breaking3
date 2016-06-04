@@ -10,9 +10,9 @@ import breaking.bones3.screens.PlayScreen;
  * Created by wolos on 12/05/2016.
  */
 public class Collision extends InteractiveTileObject {
-    public Collision(PlayScreen screen, Rectangle bounds){
+    public Collision(World world, TiledMap map, Rectangle bounds){
 
-        super(screen,bounds);
+        super(world, map, bounds);
         fixture.setUserData(this);
 
     }
