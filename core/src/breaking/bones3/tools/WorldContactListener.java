@@ -22,19 +22,7 @@ public class WorldContactListener implements ContactListener{
         Fixture fixB = contact.getFixtureB();
 
         int cDef = fixA.getFilterData().categoryBits | fixB.getFilterData().categoryBits;
-        switch (cDef){
-            case PlayGame.ENEMY_COLISION_COLISION | PlayGame.PLAYER_BIT:
-                if(fixA.getFilterData().categoryBits == PlayGame.ENEMY_COLISION_COLISION)
-                    ((Enemy)fixA.getUserData()).hitonColision((Player) fixB.getUserData());
-                else if(fixB.getFilterData().categoryBits == PlayGame.ENEMY_COLISION_COLISION)
-                    ((Enemy)fixA.getUserData()).hitonColision((Player) fixB.getUserData());
-
-        }
-
-
-
-
-
+        
         if(fixA.getUserData() == "espada" || fixB.getUserData() == "espada"){
             Fixture espada = fixA.getUserData() == "espada" ? fixA : fixB;
             Fixture object = espada == fixA ? fixB : fixA;
@@ -45,6 +33,18 @@ public class WorldContactListener implements ContactListener{
             }
 
         }
+        
+        
+        switch (cDef){
+            case PlayGame.ENEMY_COLISION_COLISION | PlayGame.PLAYER_BIT:
+                if(fixA.getFilterData().categoryBits == PlayGame.ENEMY_COLISION_COLISION)
+                    ((Enemy)fixA.getUserData()).hitonColision((Player) fixB.getUserData());
+                else if(fixB.getFilterData().categoryBits == PlayGame.ENEMY_COLISION_COLISION)
+                    ((Enemy)fixB.getUserData()).hitonColision((Player) fixB.getUserData());
+
+        }
+
+        
 
     }
 

@@ -15,6 +15,7 @@ import com.badlogic.gdx.utils.Array;
 import breaking.bones3.PlayGame;
 import breaking.bones3.scenes.Hud;
 import breaking.bones3.screens.PlayScreen;
+import com.badlogic.gdx.graphics.g2d.Batch;
 
 /**
  * Created by wolos on 18/05/2016.
@@ -28,10 +29,7 @@ public class Enemy1 extends Enemy {
     private int vida = 100;
 
 
-    @Override
-    public void hitonColision(Player userData) {
-     setToDestroy = true;
-    }
+    
 
     @Override
     protected void defineEnemy() {
@@ -44,11 +42,12 @@ public class Enemy1 extends Enemy {
         CircleShape shape = new CircleShape();
         shape.setRadius(9 / PlayGame.PPM);
         fdef.filter.categoryBits = PlayGame.ENEMY_BIT;
-        // player pode colidir
-        fdef.filter.maskBits = PlayGame.GROUND_BIT | PlayGame.DOOR_BIT | PlayGame.PECAS_BIT | PlayGame.PEDRA_BIT | PlayGame.OSSO_BIT | PlayGame.CORACAO_BIT | PlayGame.ENEMY_BIT | PlayGame.OBJECT_BIT | PlayGame.PLAYER_BIT;
+        // enemy pode colidir
+        fdef.filter.maskBits = PlayGame.GROUND_BIT | PlayGame.DOOR_BIT | PlayGame.PECAS_BIT | PlayGame.PEDRA_BIT | PlayGame.OSSO_BIT | PlayGame.CORACAO_BIT | PlayGame.ENEMY_BIT | PlayGame.OBJECT_BIT | PlayGame.PLAYER_BIT | PlayGame.ENEMY_COLISION_COLISION;
 
         fdef.shape = shape;
         b2body.createFixture(fdef);
+        b2body.createFixture(fdef).setUserData(this);
 
         //create the colision
         PolygonShape colisao = new PolygonShape();
@@ -61,9 +60,18 @@ public class Enemy1 extends Enemy {
 
         fdef.shape = colisao;
         fdef.restitution = 0.5f;
-        fdef.filter.categoryBits = PlayGame.ENEMY_BIT;
+        fdef.filter.categoryBits = PlayGame.ENEMY_COLISION_COLISION;
         b2body.createFixture(fdef).setUserData(this);
 
+    }
+    //faz o inimigo 
+    public void draw(Batch batch){
+        if(!destroyed || stateTime < 1)
+            super.draw(batch);
+    }
+    @Override
+    public void hitonColision(Player userData) {
+     setToDestroy = true;
     }
 
     public Enemy1(PlayScreen screen, float x, float y) {
@@ -79,25 +87,26 @@ public class Enemy1 extends Enemy {
 
 
     }
+    
+    //colisao com o player
 
-    @Override
-    public void onEspadaHit() {
-        Gdx.app.log("Colisao", "Inimigo1");
-        Hud.addScore(500);
-        PlayGame.maneger.get("audio/sfx/breakblock.wav", Sound.class).play();
-    }
+   
 
     public void update(float dt) {
         stateTime += dt;
+        //morreu
         if(setToDestroy && !destroyed){
             world.destroyBody(b2body);
             destroyed = true;
-            setRegion(new TextureRegion(screen.getAtlas().findRegion("InimigoDireita"), 1 * 21, 0, 24, 24));
-
+            setRegion(new TextureRegion(screen.getAtlas().findRegion("InimigoDireita"), 1 * 21, 0, 24, 24));//setar um frame apenas
+            stateTime = 0;    
         }
+        //animacao
         else if(!destroyed) {
+            b2body.setLinearVelocity(velocity);
             setPosition(b2body.getPosition().x - getWidth() / 2, b2body.getPosition().y - getHeight() / 2);
             setRegion(walkAnimation.getKeyFrame(stateTime, true));
+            
 
         }
 
