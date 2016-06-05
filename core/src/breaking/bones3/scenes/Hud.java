@@ -14,6 +14,8 @@ import com.badlogic.gdx.utils.viewport.Viewport;
 import java.awt.Color;
 
 import breaking.bones3.PlayGame;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
 
 /**
  * Created by wolos on 11/05/2016.
@@ -30,26 +32,32 @@ public class Hud implements Disposable {
     private float timeCount;
     private float worldTimer;
     private static Label scoreLabel;
-     private Label vidasLabel;
+    private Label vidasLabel;
     private Label scoreLabelTexto;
     private Label vidasLabelTexto;
     private Label countDown;
+    private Object textStyle;
+    private BitmapFont font;
 
     public Hud(SpriteBatch sb){
         score = 0;
         vidas = 3;
+        
+        font = new BitmapFont(Gdx.files.internal("bones.fnt"));
 
         viewport = new FitViewport(PlayGame.V_WIDTH, PlayGame.V_HEIGHT,new OrthographicCamera());
         stage = new Stage(viewport,sb);
         Table table = new Table();
         table.top();
         table.setFillParent(true);
-
+        
+        
+        
 
         scoreLabel = new Label(String.format("%06d", score), new Label.LabelStyle(new BitmapFont(), com.badlogic.gdx.graphics.Color.WHITE));
         vidasLabel = new Label(String.format("%01d", vidas), new Label.LabelStyle(new BitmapFont(), com.badlogic.gdx.graphics.Color.WHITE));
-        scoreLabelTexto = new Label("Score", new Label.LabelStyle(new BitmapFont(), com.badlogic.gdx.graphics.Color.WHITE));
-        vidasLabelTexto = new Label("LIFE", new Label.LabelStyle(new BitmapFont(), com.badlogic.gdx.graphics.Color.WHITE));
+        scoreLabelTexto = new Label("Score", new Label.LabelStyle(font, com.badlogic.gdx.graphics.Color.WHITE));
+        vidasLabelTexto = new Label("LIFE", new Label.LabelStyle(font, com.badlogic.gdx.graphics.Color.WHITE));
 
         table.add(scoreLabelTexto).expand().padTop(-200);
         table.add(vidasLabelTexto).expand().padTop(-200);

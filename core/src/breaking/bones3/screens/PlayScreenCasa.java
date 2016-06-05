@@ -97,7 +97,7 @@ public class PlayScreenCasa implements Screen {
 
         player = new Player(world, atlas);
         // setar posição inicial
-        player.b2body.setTransform(5.70f, 5.70f, 0);
+        player.b2body.setTransform(4.56f, 3.42f, 0);
 
 
 
