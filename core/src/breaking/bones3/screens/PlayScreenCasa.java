@@ -38,7 +38,7 @@ import breaking.bones3.tools.WorldContactListener;
 /**
  * Created by wolos on 11/05/2016.
  */
-public class PlayScreen implements Screen {
+public class PlayScreenCasa implements Screen {
     //Sprites
     private Player player;
     private Enemy1 enemy1;
@@ -67,7 +67,7 @@ public class PlayScreen implements Screen {
     //sounds
     private Music music;
 
-    public PlayScreen(PlayGame game){
+    public PlayScreenCasa(PlayGame game){
         this.game = game;
 
         atlas = new TextureAtlas("PlayGamePackege.pack");
@@ -95,7 +95,7 @@ public class PlayScreen implements Screen {
         new B2WorldCreator(world, map);
 
 
-        //player = new Player(this);
+        player = new Player(world, atlas);
         // setar posição inicial
         player.b2body.setTransform(5.70f, 5.70f, 0);
 
@@ -108,7 +108,7 @@ public class PlayScreen implements Screen {
         //music.setLooping(true);
        //music.play();
 
-        enemy1 = new Enemy1(this,0.0f,0.0f);
+        //enemy1 = new Enemy1(world, atlas,0.0f,0.0f);
 
         //OBJETOS
         //bloco = new Bloco(this,1.0f,1.5f);
@@ -116,12 +116,7 @@ public class PlayScreen implements Screen {
 
     }
 
-    public TextureAtlas getAtlas(){
-        return atlas;
-
-
-    }
-
+   
     @Override
     public void show() {
 
@@ -161,7 +156,7 @@ public class PlayScreen implements Screen {
         handleInput(dt);
         world.step(1/60f,6,2);
         player.update(dt);
-        enemy1.update(dt);
+        //enemy1.update(dt);
         hud.update(dt);
         //bloco.update(dt);
 
@@ -198,12 +193,15 @@ public class PlayScreen implements Screen {
         game.batch.setProjectionMatrix(gameCam.combined);
         game.batch.begin();
         player.draw(game.batch);
-        enemy1.draw(game.batch);
+        //enemy1.draw(game.batch);
         //bloco.draw(game.batch);
 
         game.batch.end();
 
-
+        if ((4.50f <= player.getX() && player.getX() <= 4.60f) && (3.22f <= player.getY() && player.getY()<= 3.25f)){
+            game.setScreen(new PlayScreenVila(game));
+            dispose();
+        }
 
 
 

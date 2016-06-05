@@ -4,7 +4,7 @@ import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.physics.box2d.World;
 
-import breaking.bones3.screens.PlayScreen;
+import breaking.bones3.screens.PlayScreenCasa;
 
 /**
  * Created by wolos on 12/05/2016.

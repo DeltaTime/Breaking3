@@ -13,8 +13,9 @@ import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 
 import breaking.bones3.PlayGame;
-import breaking.bones3.screens.PlayScreen;
+import breaking.bones3.screens.PlayScreenCasa;
 import breaking.bones3.screens.PlayScreenVila;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 
 /**
  * Created by wolos on 12/05/2016.
@@ -25,6 +26,7 @@ public class Player extends Sprite {
     public State previousState;
     public World world;
     public Body b2body;
+    public TextureAtlas atlas;
     private TextureRegion playerStands;
     private Animation playWalkink;
     private Animation playStand;
@@ -33,9 +35,10 @@ public class Player extends Sprite {
     private int pontos;
 
 
-    public Player(PlayScreenVila screen){
-        super(screen.getAtlas().findRegion("PlayerDireita"));
-        this.world = screen.getWorld();
+    public Player(World world, TextureAtlas atlas){
+        super(atlas.findRegion("PlayerDireita"));
+        this.world = world;
+        
         currentState = State.STANDING;
         previousState = State.STANDING;
         stateTimer = 0;
@@ -47,7 +50,7 @@ public class Player extends Sprite {
         //andar aimation
         for(int i = 0; i < 3; i++){
             //frames.add(new TextureRegion(getTexture(),i * 32,0,31,31));//busca os frames de 31 pixel na imagem
-            frames.add(new TextureRegion(screen.getAtlas().findRegion("PlayerDireita"), i * 32, 0, 32, 32));
+            frames.add(new TextureRegion(atlas.findRegion("PlayerDireita"), i * 32, 0, 32, 32));
         }
 
         playWalkink = new Animation(0.1f,frames);
@@ -56,7 +59,7 @@ public class Player extends Sprite {
 
 
         definePlayer();
-        playerStands = new TextureRegion(getTexture(),screen.getAtlas().findRegion("PlayerDireita").getRegionX(),screen.getAtlas().findRegion("PlayerDireita").getRegionY(),screen.getAtlas().findRegion("PlayerDireita").getRegionHeight(),31);//31 largura do frame
+        playerStands = new TextureRegion(getTexture(),atlas.findRegion("PlayerDireita").getRegionX(),atlas.findRegion("PlayerDireita").getRegionY(),atlas.findRegion("PlayerDireita").getRegionHeight(),31);//31 largura do frame
         setBounds(0,0,16/PlayGame.PPM, 16/PlayGame.PPM);
         setRegion(playerStands);
     }

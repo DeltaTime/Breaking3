@@ -27,7 +27,7 @@ import breaking.bones3.tools.WorldContactListener;
 /**
  * Created by wolos on 11/05/2016.
  */
-public class PlayScreenVila implements Screen {
+public class PlayScreenBoss implements Screen {
     //Sprites
     private Player player;
     private Enemy1 enemy1;
@@ -56,7 +56,7 @@ public class PlayScreenVila implements Screen {
     //sounds
     private Music music;
 
-    public PlayScreenVila(PlayGame game){
+    public PlayScreenBoss(PlayGame game){
         this.game = game;
 
         atlas = new TextureAtlas("PlayGamePackege.pack");
@@ -70,7 +70,7 @@ public class PlayScreenVila implements Screen {
 
         //carregar o map e configurar
         mapLoader = new TmxMapLoader();
-        map = mapLoader.load("vilamap.tmx");
+        map = mapLoader.load("cavernaboss.tmx");
         renderer = new OrthogonalTiledMapRenderer(map,1/PlayGame.PPM);
 
         //centralizar a camera
@@ -85,7 +85,7 @@ public class PlayScreenVila implements Screen {
 
 
         player = new Player(world, atlas);
-        player.b2body.setTransform(7.20f, 4.28f, 0);
+        player.b2body.setTransform(7.69f, 11.15f, 0);
 
 
 
@@ -191,15 +191,12 @@ public class PlayScreenVila implements Screen {
 
         game.batch.end();
 
-        if ((7.17f <= player.getX() && player.getX() <= 7.19f) && (4.48f <= player.getY() && player.getY()<= 4.52f)){
-            game.setScreen(new PlayScreenCasa(game));
-            dispose();
-        }
-        
-        if ((11.66f <= player.getX() && player.getX() <= 11.67f) && (11.50f <= player.getY() && player.getY()<= 11.52f)){
+        if ((7.60f <= player.getX() && player.getX() <= 7.77f) && (11.34f <= player.getY() && player.getY()<= 11.39f)){
             game.setScreen(new PlayScreenCaverna(game));
             dispose();
         }
+        
+        
 
 
 
@@ -247,3 +244,4 @@ public class PlayScreenVila implements Screen {
 
     }
 }
+

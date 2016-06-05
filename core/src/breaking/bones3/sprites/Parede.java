@@ -9,7 +9,7 @@ import com.badlogic.gdx.physics.box2d.World;
 
 import breaking.bones3.PlayGame;
 import breaking.bones3.scenes.Hud;
-import breaking.bones3.screens.PlayScreen;
+import breaking.bones3.screens.PlayScreenCasa;
 
 /**
  * Created by wolos on 16/05/2016.

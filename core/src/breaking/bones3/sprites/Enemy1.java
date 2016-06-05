@@ -14,8 +14,10 @@ import com.badlogic.gdx.utils.Array;
 
 import breaking.bones3.PlayGame;
 import breaking.bones3.scenes.Hud;
-import breaking.bones3.screens.PlayScreen;
+import breaking.bones3.screens.PlayScreenCasa;
 import com.badlogic.gdx.graphics.g2d.Batch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.physics.box2d.World;
 
 /**
  * Created by wolos on 18/05/2016.
@@ -27,14 +29,16 @@ public class Enemy1 extends Enemy {
     private boolean setToDestroy;
     private boolean destroyed;
     private int vida = 100;
+    private World world;
 
 
     
 
     @Override
-    protected void defineEnemy() {
+    public void defineEnemy() {
         BodyDef bdef = new BodyDef();
-        bdef.position.set(getX(),getY());
+        System.out.println(getX()+","+getY());
+        bdef.position.set(getX()/PlayGame.PPM, getY()/PlayGame.PPM);
         bdef.type = BodyDef.BodyType.DynamicBody;
         b2body = world.createBody(bdef);
 
@@ -74,11 +78,11 @@ public class Enemy1 extends Enemy {
      setToDestroy = true;
     }
 
-    public Enemy1(PlayScreen screen, float x, float y) {
-        super(screen, x, y);
+    public Enemy1(World world, TextureAtlas atlas, float x, float y) {
+        super(world, atlas, x, y);
         frames = new Array<TextureRegion>();
         for (int i = 0; i < 4; i++)
-            frames.add(new TextureRegion(screen.getAtlas().findRegion("InimigoDireita"), i * 21, 0, 24, 24));
+            frames.add(new TextureRegion(atlas.findRegion("InimigoDireita"), i * 21, 0, 24, 24));
         walkAnimation = new Animation(0.1f, frames);
         stateTime = 0;
         setBounds(getX(), getY(), 16 / PlayGame.PPM, 16 / PlayGame.PPM);
@@ -98,7 +102,7 @@ public class Enemy1 extends Enemy {
         if(setToDestroy && !destroyed){
             world.destroyBody(b2body);
             destroyed = true;
-            setRegion(new TextureRegion(screen.getAtlas().findRegion("InimigoDireita"), 1 * 21, 0, 24, 24));//setar um frame apenas
+            setRegion(new TextureRegion(atlas.findRegion("InimigoDireita"), 1 * 21, 0, 24, 24));//setar um frame apenas
             stateTime = 0;    
         }
         //animacao

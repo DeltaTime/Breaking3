@@ -10,7 +10,9 @@ import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.utils.Array;
 
 import breaking.bones3.PlayGame;
-import breaking.bones3.screens.PlayScreen;
+import breaking.bones3.screens.PlayScreenCasa;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.physics.box2d.World;
 
 /**
  * Created by wolos on 18/05/2016.
@@ -21,6 +23,8 @@ public class Bloco extends ObjetosInterativos {
     private Array<TextureRegion> frames;
     private boolean setToDestroy;
     private boolean destroyed;
+    private World world;
+    private TextureAtlas atlas;
 
 
 
@@ -62,11 +66,11 @@ public class Bloco extends ObjetosInterativos {
         setToDestroy = true;
     }
 
-    public Bloco(PlayScreen screen, float x, float y) {
-        super(screen, x, y);
+    public Bloco(World world, TextureAtlas atlas, float x, float y) {
+        super(world, atlas, x, y);
         frames = new Array<TextureRegion>();
         for (int i = 0; i < 4; i++)
-            frames.add(new TextureRegion(screen.getAtlas().findRegion("bloco"), i * 24, 0, 24, 24));
+            frames.add(new TextureRegion(atlas.findRegion("bloco"), i * 24, 0, 24, 24));
         Animacao = new Animation(0.1f, frames);
         stateTime = 0;
         setBounds(getX(), getY(), 16 / PlayGame.PPM, 16 / PlayGame.PPM);
@@ -81,7 +85,7 @@ public class Bloco extends ObjetosInterativos {
         if(setToDestroy && !destroyed){
             world.destroyBody(b2body);
             destroyed = true;
-            setRegion(new TextureRegion(screen.getAtlas().findRegion("bloco"), 1 * 21, 0, 24, 24));
+            setRegion(new TextureRegion(atlas.findRegion("bloco"), 1 * 21, 0, 24, 24));
 
         }
         else if(!destroyed) {

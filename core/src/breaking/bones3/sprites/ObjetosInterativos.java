@@ -4,20 +4,21 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.World;
 
-import breaking.bones3.screens.PlayScreen;
+import breaking.bones3.screens.PlayScreenCasa;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 
 /**
  * Created by wolos on 19/05/2016.
  */
 public abstract class ObjetosInterativos extends Sprite {
     protected World world;
-    protected PlayScreen screen;
+    protected TextureAtlas atlas;
 
     public Body b2body;
 
-    public ObjetosInterativos(PlayScreen screen, float x, float y){
-        this.world = screen.getWorld();
-        this.screen = screen;
+    public ObjetosInterativos(World world, TextureAtlas atlas, float x, float y){
+        this.world = world;
+        this.atlas = atlas;
         setPosition(x,y);
         defineObjeto();
 

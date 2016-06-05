@@ -27,7 +27,7 @@ import breaking.bones3.tools.WorldContactListener;
 /**
  * Created by wolos on 11/05/2016.
  */
-public class PlayScreenVila implements Screen {
+public class PlayScreenCaverna implements Screen {
     //Sprites
     private Player player;
     private Enemy1 enemy1;
@@ -56,7 +56,7 @@ public class PlayScreenVila implements Screen {
     //sounds
     private Music music;
 
-    public PlayScreenVila(PlayGame game){
+    public PlayScreenCaverna(PlayGame game){
         this.game = game;
 
         atlas = new TextureAtlas("PlayGamePackege.pack");
@@ -70,7 +70,7 @@ public class PlayScreenVila implements Screen {
 
         //carregar o map e configurar
         mapLoader = new TmxMapLoader();
-        map = mapLoader.load("vilamap.tmx");
+        map = mapLoader.load("cavernaesqueletomap2.tmx");
         renderer = new OrthogonalTiledMapRenderer(map,1/PlayGame.PPM);
 
         //centralizar a camera
@@ -85,7 +85,7 @@ public class PlayScreenVila implements Screen {
 
 
         player = new Player(world, atlas);
-        player.b2body.setTransform(7.20f, 4.28f, 0);
+        player.b2body.setTransform(4.72f, 11.63f, 0);
 
 
 
@@ -191,13 +191,13 @@ public class PlayScreenVila implements Screen {
 
         game.batch.end();
 
-        if ((7.17f <= player.getX() && player.getX() <= 7.19f) && (4.48f <= player.getY() && player.getY()<= 4.52f)){
-            game.setScreen(new PlayScreenCasa(game));
+        if ((4.64f <= player.getX() && player.getX() <= 4.79f) && (11.80f <= player.getY() && player.getY()<= 11.84f)){
+            game.setScreen(new PlayScreenVila(game));
             dispose();
         }
         
-        if ((11.66f <= player.getX() && player.getX() <= 11.67f) && (11.50f <= player.getY() && player.getY()<= 11.52f)){
-            game.setScreen(new PlayScreenCaverna(game));
+        if ((11.64f <= player.getX() && player.getX() <= 11.67f) && (4.17f <= player.getY() && player.getY()<= 4.19f)){
+            game.setScreen(new PlayScreenBoss(game));
             dispose();
         }
 
