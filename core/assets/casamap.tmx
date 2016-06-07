@@ -47,7 +47,5 @@
   <object id="27" x="337" y="449" width="13" height="13"/>
  </objectgroup>
  <objectgroup name="vasos"/>
- <objectgroup name="Porta">
-  <object id="30" x="431.636" y="628.364" width="48.5455" height="11.4545"/>
- </objectgroup>
+ <objectgroup name="Porta"/>
 </map>
