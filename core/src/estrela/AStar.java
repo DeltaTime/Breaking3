@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package astar;
+package estrela;
 
 import java.util.ArrayList;
 
@@ -21,8 +21,8 @@ public class AStar {
     
 
     public AStar() {
-        openList = new ArrayList<>();
-        closeList = new ArrayList<>();
+        openList = new ArrayList<Node>();
+        closeList = new ArrayList<Node>();
     }
     
     public Node AStar(Node startPos, Node endPos, Node[][] map){
