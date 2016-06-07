@@ -10,6 +10,7 @@ import breaking.bones3.PlayGame;
 import breaking.bones3.sprites.Enemy;
 import breaking.bones3.sprites.InteractiveTileObject;
 import breaking.bones3.sprites.Player;
+import breaking.bones3.sprites.Porta;
 
 /**
  * Created by wolos on 16/05/2016.
@@ -41,6 +42,7 @@ public class WorldContactListener implements ContactListener{
                     ((Enemy)fixA.getUserData()).hitonColision((Player) fixB.getUserData());
                 else if(fixB.getFilterData().categoryBits == PlayGame.ENEMY_COLISION_COLISION)
                     ((Enemy)fixB.getUserData()).hitonColision((Player) fixB.getUserData());
+
 
         }
 

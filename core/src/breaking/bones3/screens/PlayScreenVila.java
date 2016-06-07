@@ -130,6 +130,7 @@ public class PlayScreenVila implements Screen {
             player.b2body.applyLinearImpulse(new Vector2(-0.3f, 0), player.b2body.getWorldCenter(), true);
 
 
+
         }
 
         if(Gdx.input.isKeyPressed(Input.Keys.RIGHT)&& player.b2body.getLinearVelocity().x <= 0.8) {
@@ -145,6 +146,12 @@ public class PlayScreenVila implements Screen {
             //gameCam.position.y -= 2 * dt;
             //if(Gdx.input.isTouched())
             player.b2body.applyLinearImpulse(new Vector2(0, -0.3f), player.b2body.getWorldCenter(), true);
+        }
+
+        if(player.b2body.getLinearVelocity().x != 0 | player.b2body.getLinearVelocity().y != 0){
+
+            System.out.println(player.getX());
+            System.out.println(player.getY());
         }
 
 
@@ -169,8 +176,8 @@ public class PlayScreenVila implements Screen {
         //renderizar tudo
         renderer.setView(gameCam);
 
-         System.out.println(player.getX());
-         System.out.println(player.getY());
+
+
 
 
     }

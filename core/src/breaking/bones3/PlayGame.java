@@ -34,6 +34,7 @@ public class PlayGame extends Game {
 	public static final short ENEMY_BIT = 64;
 	public static final short ENEMY_COLISION_COLISION = 128;
 
+
 	public static AssetManager maneger;
 
 

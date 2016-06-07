@@ -13,6 +13,7 @@ import com.badlogic.gdx.physics.box2d.World;
 import breaking.bones3.PlayGame;
 import breaking.bones3.sprites.Bau;
 import breaking.bones3.sprites.Parede;
+import breaking.bones3.sprites.Porta;
 import breaking.bones3.sprites.Vasos;
 
 /**
@@ -67,6 +68,17 @@ public class B2WorldCreator {
             Rectangle rect = ((RectangleMapObject) object).getRectangle();
             new Vasos(world, map, rect);
         }
+
+        //Porta
+        for(MapObject object : map.getLayers().get(6).getObjects().getByType(RectangleMapObject.class)){
+            Rectangle rect = ((RectangleMapObject) object).getRectangle();
+            new Porta(world, map, rect);
+        }
+
+
+
+
+
 
         
 

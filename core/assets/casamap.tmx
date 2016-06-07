@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="60" height="60" tilewidth="16" tileheight="16" nextobjectid="29">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="60" height="60" tilewidth="16" tileheight="16" nextobjectid="32">
  <tileset firstgid="1" name="tileset casa" tilewidth="16" tileheight="16" tilecount="741" columns="39">
   <image source="tileset casa.png" width="624" height="304"/>
  </tileset>
@@ -47,5 +47,7 @@
   <object id="27" x="337" y="449" width="13" height="13"/>
  </objectgroup>
  <objectgroup name="vasos"/>
- <objectgroup name="Porta"/>
+ <objectgroup name="Porta">
+  <object id="30" x="431.636" y="628.364" width="48.5455" height="11.4545"/>
+ </objectgroup>
 </map>

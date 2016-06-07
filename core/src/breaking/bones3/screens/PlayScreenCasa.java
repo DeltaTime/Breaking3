@@ -147,6 +147,12 @@ public class PlayScreenCasa implements Screen {
             //if(Gdx.input.isTouched())
             player.b2body.applyLinearImpulse(new Vector2(0, -0.3f), player.b2body.getWorldCenter(), true);
         }
+        if(player.b2body.getLinearVelocity().x != 0 | player.b2body.getLinearVelocity().y != 0){
+
+            System.out.print("PlayerX:" + player.getX() + " PlayerY: " + player.getY());
+            System.out.println("\n");
+
+        }
 
 
     }
@@ -170,8 +176,7 @@ public class PlayScreenCasa implements Screen {
         //renderizar tudo
         renderer.setView(gameCam);
 
-         System.out.println(player.getX());
-         System.out.println(player.getY());
+
 
 
     }
