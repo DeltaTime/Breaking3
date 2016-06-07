@@ -199,15 +199,20 @@ public class PlayScreenCasa implements Screen {
         game.batch.end();
 
         if ((4.50f <= player.getX() && player.getX() <= 4.60f) && (3.22f <= player.getY() && player.getY()<= 3.25f)){
-            game.setScreen(new PlayScreenVila(game));
+            game.setScreen(new PlayScreenVila(game,getHud(),7.0f,4.40f));
             dispose();
         }
+        
 
 
 
 
     }
 
+    public Hud getHud(){
+        return hud;
+    }
+    
     public TiledMap getMap(){
         return map;
     }

@@ -192,7 +192,7 @@ public class PlayScreenCaverna implements Screen {
         game.batch.end();
 
         if ((4.64f <= player.getX() && player.getX() <= 4.79f) && (11.80f <= player.getY() && player.getY()<= 11.84f)){
-            game.setScreen(new PlayScreenVila(game));
+           // game.setScreen(new PlayScreenVila(game));
             dispose();
         }
         

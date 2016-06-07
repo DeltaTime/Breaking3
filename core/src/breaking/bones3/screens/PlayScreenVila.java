@@ -55,9 +55,15 @@ public class PlayScreenVila implements Screen {
 
     //sounds
     private Music music;
+    private float x;
+    private float y;
 
-    public PlayScreenVila(PlayGame game){
+    public PlayScreenVila(PlayGame game, Hud hud, float x, float y){
         this.game = game;
+        this.hud = hud;
+        this.x = x;
+        this.y = y;
+        
 
         atlas = new TextureAtlas("PlayGamePackege.pack");
 
@@ -85,7 +91,7 @@ public class PlayScreenVila implements Screen {
 
 
         player = new Player(world, atlas);
-        player.b2body.setTransform(7.20f, 4.28f, 0);
+        player.b2body.setTransform(x, y, 0);
 
 
 
