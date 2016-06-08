@@ -28,10 +28,10 @@ public class Bau extends InteractiveTileObject {
     @Override
     public void onEspadaHit() {
         Gdx.app.log("Colisao", "Bau");
-        //setCategoryFilter(PlayGame.DESTROY_BIT); // destroi
-       //getCell().setTile(null); // desaparece a figura
-        getCell().setTile(tileSet.getTile(363));
-        //Hud.addScore(0);
+        setCategoryFilter(PlayGame.DESTROY_BIT); // destroi
+       getCell().setTile(null); // desaparece a figura
+       // getCell().setTile(tileSet.getTile(363));
+        Hud.addScore(500);
         PlayGame.maneger.get("audio/sfx/breakblock.wav", Sound.class).play();
 
     }

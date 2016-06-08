@@ -33,6 +33,7 @@ public class Player extends Sprite {
     private float stateTimer;
     private boolean walkingRight;
     private int pontos;
+    private EdgeShape espada;
 
 
     public Player(World world, TextureAtlas atlas){
@@ -129,14 +130,26 @@ public class Player extends Sprite {
         fdef.shape = shape;
         b2body.createFixture(fdef);
 
-        EdgeShape espada = new EdgeShape();
-        espada.set(new Vector2(-10/ PlayGame.PPM, 1/PlayGame.PPM), new Vector2(20/ PlayGame.PPM, 1/PlayGame.PPM));
+
+        espada = new EdgeShape();
+        espada.set(new Vector2(-10 / PlayGame.PPM, 1 / PlayGame.PPM), new Vector2(20 / PlayGame.PPM, 1 / PlayGame.PPM));
         fdef.shape = espada;
         fdef.isSensor = true;
         b2body.createFixture(fdef).setUserData("espada");
+        espada.dispose();
 
 
     }
 
 
-}
+
+    public void tiro(){
+
+        }
+
+
+
+    }
+
+
+

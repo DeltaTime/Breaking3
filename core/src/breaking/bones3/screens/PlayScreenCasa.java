@@ -30,6 +30,7 @@ import com.badlogic.gdx.Input;
 import breaking.bones3.PlayGame;
 import breaking.bones3.scenes.Hud;
 //import breaking.bones3.sprites.Bloco;
+import breaking.bones3.sprites.Bloco;
 import breaking.bones3.sprites.Enemy1;
 import breaking.bones3.sprites.Player;
 import breaking.bones3.tools.B2WorldCreator;
@@ -42,7 +43,7 @@ public class PlayScreenCasa implements Screen {
     //Sprites
     private Player player;
     private Enemy1 enemy1;
-    //private Bloco bloco;
+
 
 
 
@@ -96,8 +97,10 @@ public class PlayScreenCasa implements Screen {
 
 
         player = new Player(world, atlas);
+
         // setar posição inicial
         player.b2body.setTransform(4.56f, 3.42f, 0);
+
 
 
 
@@ -108,10 +111,12 @@ public class PlayScreenCasa implements Screen {
         //music.setLooping(true);
        //music.play();
 
-        //enemy1 = new Enemy1(world, atlas,0.0f,0.0f);
+
+        enemy1 = new Enemy1(world, atlas);
+        enemy1.b2body.setTransform(4.56f, 4.42f, 0);
 
         //OBJETOS
-        //bloco = new Bloco(this,1.0f,1.5f);
+
 
 
     }
@@ -154,15 +159,22 @@ public class PlayScreenCasa implements Screen {
 
         }
 
+        if(Gdx.input.isTouched()){
+            player.tiro();
+        }
+
+
+
+
 
     }
 
 
     public void update(float dt){
         handleInput(dt);
-        world.step(1/60f,6,2);
+        world.step(1 / 60f, 6, 2);
         player.update(dt);
-        //enemy1.update(dt);
+        enemy1.update(dt);
         hud.update(dt);
         //bloco.update(dt);
 
@@ -198,7 +210,7 @@ public class PlayScreenCasa implements Screen {
         game.batch.setProjectionMatrix(gameCam.combined);
         game.batch.begin();
         player.draw(game.batch);
-        //enemy1.draw(game.batch);
+        enemy1.draw(game.batch);
         //bloco.draw(game.batch);
 
         game.batch.end();
@@ -215,7 +227,7 @@ public class PlayScreenCasa implements Screen {
     }
 
     public Hud getHud(){
-        return hud;
+        return this.hud;
     }
     
     public TiledMap getMap(){

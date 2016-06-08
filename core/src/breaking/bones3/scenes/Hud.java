@@ -39,6 +39,7 @@ public class Hud implements Disposable {
     private Object textStyle;
     private BitmapFont font;
 
+
     public Hud(SpriteBatch sb){
         score = 0;
         vidas = 3;

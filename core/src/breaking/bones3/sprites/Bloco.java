@@ -66,6 +66,8 @@ public class Bloco extends ObjetosInterativos {
         setToDestroy = true;
     }
 
+
+
     public Bloco(World world, TextureAtlas atlas, float x, float y) {
         super(world, atlas, x, y);
         frames = new Array<TextureRegion>();
