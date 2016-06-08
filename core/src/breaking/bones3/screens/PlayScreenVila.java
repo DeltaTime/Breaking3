@@ -72,7 +72,7 @@ public class PlayScreenVila implements Screen {
         gameport = new FitViewport(PlayGame.V_WIDTH/PlayGame.PPM,PlayGame.V_HEIGHT/PlayGame.PPM,gameCam);
 
         //Criando a hud
-        hud = new Hud(game.batch);
+        hud = new Hud(game.batch,0,3);
 
         //carregar o map e configurar
         mapLoader = new TmxMapLoader();
@@ -205,7 +205,7 @@ public class PlayScreenVila implements Screen {
         game.batch.end();
 
         if ((7.17f <= player.getX() && player.getX() <= 7.19f) && (4.48f <= player.getY() && player.getY()<= 4.52f)){
-            game.setScreen(new PlayScreenCasa(game));
+            game.setScreen(new PlayScreenCasa(game,0,3));
             dispose();
         }
         

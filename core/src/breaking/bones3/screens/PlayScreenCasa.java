@@ -68,8 +68,9 @@ public class PlayScreenCasa implements Screen {
     //sounds
     private Music music;
 
-    public PlayScreenCasa(PlayGame game){
+    public PlayScreenCasa(PlayGame game,Integer score, Integer vidas){
         this.game = game;
+
 
         atlas = new TextureAtlas("PlayGamePackege.pack");
 
@@ -78,7 +79,7 @@ public class PlayScreenCasa implements Screen {
         gameport = new FitViewport(PlayGame.V_WIDTH/PlayGame.PPM,PlayGame.V_HEIGHT/PlayGame.PPM,gameCam);
 
         //Criando a hud
-        hud = new Hud(game.batch);
+        hud = new Hud(game.batch,score,vidas);
 
         //carregar o map e configurar
         mapLoader = new TmxMapLoader();

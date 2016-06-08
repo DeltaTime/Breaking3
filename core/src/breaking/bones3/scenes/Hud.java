@@ -12,8 +12,14 @@ import com.badlogic.gdx.utils.viewport.Viewport;
 
 
 import java.awt.Color;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 
 import breaking.bones3.PlayGame;
+import breaking.bones3.screens.Menu;
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 
@@ -40,9 +46,9 @@ public class Hud implements Disposable {
     private BitmapFont font;
 
 
-    public Hud(SpriteBatch sb){
-        score = 0;
-        vidas = 3;
+    public Hud(SpriteBatch sb, Integer scoreAtual,Integer vidasAtual){
+        score = scoreAtual;
+        vidas = vidasAtual;
         
         font = new BitmapFont(Gdx.files.internal("bones.fnt"));
 
@@ -71,6 +77,8 @@ public class Hud implements Disposable {
 
 
     }
+
+
 
     @Override
     public void dispose() {

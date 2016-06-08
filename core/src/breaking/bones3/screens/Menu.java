@@ -6,7 +6,7 @@
 package breaking.bones3.screens;
 
 import breaking.bones3.PlayGame;
-import com.badlogic.gdx.Application;
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
@@ -34,15 +34,19 @@ public class Menu implements Screen {
     private Sprite sprite_dificuldade;
     private Sprite sprite_ajuda;
     private Sprite sprite_sair;
+
     
     public Menu(PlayGame game){
         this.game = game;
         camera = new OrthographicCamera();
         camera.setToOrtho(false, 800, 480);
         click_posicao = new Vector3();
-        
-        
-    }
+
+
+}
+
+
+
     
     
     @Override
@@ -98,7 +102,7 @@ public class Menu implements Screen {
             camera.unproject(click_posicao);
             if(click_posicao.x > sprite_novojogo.getX() && click_posicao.x < (sprite_novojogo.getX() + sprite_novojogo.getWidth())){
                 if(click_posicao.y > sprite_novojogo.getY() && click_posicao.y < (sprite_novojogo.getY() + sprite_novojogo.getHeight())){
-                    game.setScreen(new PlayScreenCasa(game));
+                    game.setScreen(new PlayScreenCasa(game,0,3));
                     dispose();
                 }
             }

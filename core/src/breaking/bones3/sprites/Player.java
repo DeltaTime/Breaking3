@@ -26,19 +26,19 @@ public class Player extends Sprite {
     public State previousState;
     public World world;
     public Body b2body;
-    public TextureAtlas atlas;
+
     private TextureRegion playerStands;
     private Animation playWalkink;
-    private Animation playStand;
     private float stateTimer;
     private boolean walkingRight;
-    private int pontos;
+
     private EdgeShape espada;
 
 
     public Player(World world, TextureAtlas atlas){
         super(atlas.findRegion("PlayerDireita"));
         this.world = world;
+
         
         currentState = State.STANDING;
         previousState = State.STANDING;
@@ -129,7 +129,6 @@ public class Player extends Sprite {
 
         fdef.shape = shape;
         b2body.createFixture(fdef);
-
 
         espada = new EdgeShape();
         espada.set(new Vector2(-10 / PlayGame.PPM, 1 / PlayGame.PPM), new Vector2(20 / PlayGame.PPM, 1 / PlayGame.PPM));

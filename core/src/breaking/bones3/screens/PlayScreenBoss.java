@@ -66,7 +66,7 @@ public class PlayScreenBoss implements Screen {
         gameport = new FitViewport(PlayGame.V_WIDTH/PlayGame.PPM,PlayGame.V_HEIGHT/PlayGame.PPM,gameCam);
 
         //Criando a hud
-        hud = new Hud(game.batch);
+        hud = new Hud(game.batch,0,3);
 
         //carregar o map e configurar
         mapLoader = new TmxMapLoader();
