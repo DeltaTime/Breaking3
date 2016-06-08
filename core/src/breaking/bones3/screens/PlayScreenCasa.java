@@ -99,7 +99,7 @@ public class PlayScreenCasa implements Screen {
         player = new Player(world, atlas);
 
         // setar posição inicial
-        player.b2body.setTransform(4.56f, 3.42f, 0);
+        player.b2body.setTransform(5.65f, 5.57f, 0);
 
 
 
@@ -133,24 +133,25 @@ public class PlayScreenCasa implements Screen {
 
         if(Gdx.input.isKeyPressed(Input.Keys.LEFT)&& player.b2body.getLinearVelocity().x >= -0.8) {
             //gameCam.position.x -= 2 * dt;
-            player.b2body.applyLinearImpulse(new Vector2(-0.3f, 0), player.b2body.getWorldCenter(), true);
+            player.b2body.applyLinearImpulse(new Vector2(-1.3f, 0), player.b2body.getWorldCenter(), true);
+
 
 
         }
 
         if(Gdx.input.isKeyPressed(Input.Keys.RIGHT)&& player.b2body.getLinearVelocity().x <= 0.8) {
             //gameCam.position.x += 2 * dt;
-            player.b2body.applyLinearImpulse(new Vector2(0.3f, 0), player.b2body.getWorldCenter(), true);
+            player.b2body.applyLinearImpulse(new Vector2(1.3f, 0), player.b2body.getWorldCenter(), true);
         }
         if(Gdx.input.isKeyPressed(Input.Keys.UP) && player.b2body.getLinearVelocity().y <= 0.8) {
             //gameCam.position.y += 2 * dt;
 
-            player.b2body.applyLinearImpulse(new Vector2(0, 0.3f), player.b2body.getWorldCenter(), true);
+            player.b2body.applyLinearImpulse(new Vector2(0, 1.3f), player.b2body.getWorldCenter(), true);
         }
         if(Gdx.input.isKeyPressed(Input.Keys.DOWN)&& player.b2body.getLinearVelocity().y >= -0.8) {
             //gameCam.position.y -= 2 * dt;
             //if(Gdx.input.isTouched())
-            player.b2body.applyLinearImpulse(new Vector2(0, -0.3f), player.b2body.getWorldCenter(), true);
+            player.b2body.applyLinearImpulse(new Vector2(0, -1.3f), player.b2body.getWorldCenter(), true);
         }
         if(player.b2body.getLinearVelocity().x != 0 | player.b2body.getLinearVelocity().y != 0){
 
