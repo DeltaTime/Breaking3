@@ -21,7 +21,7 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
  * Created by wolos on 12/05/2016.
  */
 public class Player extends Sprite {
-    public enum State{WALKING, STANDING}
+    public enum State{WALKING, STANDING, SUBIR, DESCER}
     public State currentState;
     public State previousState;
     public World world;
@@ -29,6 +29,8 @@ public class Player extends Sprite {
 
     private TextureRegion playerStands;
     private Animation playWalkink;
+    private Animation playBack;
+    private Animation playFrente;
     private float stateTimer;
     private boolean walkingRight;
 
@@ -58,6 +60,23 @@ public class Player extends Sprite {
         frames.clear();
 
 
+        for(int i = 0; i < 3; i++){
+            //frames.add(new TextureRegion(getTexture(),i * 32,0,31,31));//busca os frames de 31 pixel na imagem
+            frames.add(new TextureRegion(atlas.findRegion("PlayerCostas"), i * 32, 0, 32, 32));
+        }
+
+        playBack = new Animation(0.1f,frames);
+        frames.clear();
+
+        for(int i = 0; i < 3; i++){
+            //frames.add(new TextureRegion(getTexture(),i * 32,0,31,31));//busca os frames de 31 pixel na imagem
+            frames.add(new TextureRegion(atlas.findRegion("playerFrente"), i * 32, 0, 32, 32));
+        }
+
+        playFrente = new Animation(0.1f,frames);
+        frames.clear();
+
+
 
         definePlayer();
         playerStands = new TextureRegion(getTexture(),atlas.findRegion("PlayerDireita").getRegionX(),atlas.findRegion("PlayerDireita").getRegionY(),atlas.findRegion("PlayerDireita").getRegionHeight(),31);//31 largura do frame
@@ -82,10 +101,18 @@ public class Player extends Sprite {
             case STANDING:
                 region = playerStands;
                 break;
+            case SUBIR:
+                region = playBack.getKeyFrame(stateTimer, true);
+                break;
+            case DESCER:
+                region = playFrente.getKeyFrame(stateTimer, true);
+                break;
 
 
 
         }
+
+
         if((b2body.getLinearVelocity().x < 0 || !walkingRight) && !region.isFlipX()){
             region.flip(true,false);
             walkingRight = false;
@@ -102,6 +129,9 @@ public class Player extends Sprite {
     }
 
     public State getState(){
+
+
+        /*
         if(b2body.getLinearVelocity().x != 0 || b2body.getLinearVelocity().x != 0) {
             return State.WALKING;
         }
@@ -110,6 +140,21 @@ public class Player extends Sprite {
             return State.STANDING;
 
         }
+        */
+
+        if (b2body.getLinearVelocity().x > 0 || b2body.getLinearVelocity().x > 0  )
+            return State.WALKING;
+        if (b2body.getLinearVelocity().y > 0 )
+            return State.SUBIR;
+        if (b2body.getLinearVelocity().y < 0 )
+            return State.DESCER;
+        else{
+            return State.STANDING;
+        }
+
+
+
+
 
     }
 
