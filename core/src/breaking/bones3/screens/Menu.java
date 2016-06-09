@@ -102,7 +102,7 @@ public class Menu implements Screen {
             camera.unproject(click_posicao);
             if(click_posicao.x > sprite_novojogo.getX() && click_posicao.x < (sprite_novojogo.getX() + sprite_novojogo.getWidth())){
                 if(click_posicao.y > sprite_novojogo.getY() && click_posicao.y < (sprite_novojogo.getY() + sprite_novojogo.getHeight())){
-                    game.setScreen(new PlayScreenCasa(game,0,3));
+                    game.setScreen(new PlayScreenCasa(game,5.65f,5.57f));
                     dispose();
                 }
             }

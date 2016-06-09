@@ -56,7 +56,7 @@ public class PlayScreenBoss implements Screen {
     //sounds
     private Music music;
 
-    public PlayScreenBoss(PlayGame game){
+    public PlayScreenBoss(PlayGame game, float x, float y){
         this.game = game;
 
         atlas = new TextureAtlas("PlayGamePackege.pack");
@@ -85,7 +85,7 @@ public class PlayScreenBoss implements Screen {
 
 
         player = new Player(world, atlas);
-        player.b2body.setTransform(7.69f, 11.15f, 0);
+        player.b2body.setTransform(x, y, 0);
 
 
 
@@ -197,7 +197,7 @@ public class PlayScreenBoss implements Screen {
         game.batch.end();
 
         if ((7.60f <= player.getX() && player.getX() <= 7.77f) && (11.34f <= player.getY() && player.getY()<= 11.39f)){
-            game.setScreen(new PlayScreenCaverna(game));
+            game.setScreen(new PlayScreenCaverna(game, 11.65f, 4.36f));
             dispose();
         }
         

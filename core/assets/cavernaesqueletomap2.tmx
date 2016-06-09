@@ -102,17 +102,17 @@
   <object id="86" x="544.125" y="416" width="15.8125" height="15.9375"/>
  </objectgroup>
  <objectgroup name="Porta">
-  <object id="89" x="1008.09" y="752.091" width="15.9091" height="15.9091"/>
-  <object id="90" x="1024" y="752.182" width="15.9091" height="15.8182"/>
-  <object id="92" x="1040.18" y="751.909" width="15.7273" height="16.1818"/>
-  <object id="93" x="1056" y="752.091" width="15.9091" height="15.8182"/>
-  <object id="94" x="1072.09" y="752" width="15.9091" height="16.0909"/>
-  <object id="95" x="1088.09" y="752.091" width="16" height="16"/>
-  <object id="96" x="1008" y="768" width="16.0909" height="16"/>
-  <object id="97" x="1024.09" y="767.909" width="16" height="16.1818"/>
-  <object id="98" x="1040.09" y="768.273" width="15.7273" height="15.8182"/>
-  <object id="99" x="1055.91" y="768.091" width="16.0909" height="15.9091"/>
-  <object id="100" x="1072" y="768.091" width="15.8182" height="15.9091"/>
-  <object id="101" x="1087.82" y="767.909" width="16.2727" height="16"/>
+  <object id="89" x="1212.09" y="689.091" width="15.9091" height="15.9091"/>
+  <object id="90" x="1228" y="689.182" width="15.9091" height="15.8182"/>
+  <object id="92" x="1244.18" y="688.909" width="15.7273" height="16.1818"/>
+  <object id="93" x="1260" y="689.091" width="15.9091" height="15.8182"/>
+  <object id="94" x="1276.09" y="689" width="15.9091" height="16.0909"/>
+  <object id="95" x="1292.09" y="689.091" width="16" height="16"/>
+  <object id="96" x="1212" y="705" width="16.0909" height="16"/>
+  <object id="97" x="1228.09" y="704.909" width="16" height="16.1818"/>
+  <object id="98" x="1244.09" y="705.273" width="15.7273" height="15.8182"/>
+  <object id="99" x="1259.91" y="705.091" width="16.0909" height="15.9091"/>
+  <object id="100" x="1276" y="705.091" width="15.8182" height="15.9091"/>
+  <object id="101" x="1291.82" y="704.909" width="16.2727" height="16"/>
  </objectgroup>
 </map>

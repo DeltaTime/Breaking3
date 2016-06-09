@@ -68,7 +68,7 @@ public class PlayScreenCasa implements Screen {
     //sounds
     private Music music;
 
-    public PlayScreenCasa(PlayGame game,Integer score, Integer vidas){
+    public PlayScreenCasa(PlayGame game,float x, float y){
         this.game = game;
 
 
@@ -79,7 +79,7 @@ public class PlayScreenCasa implements Screen {
         gameport = new FitViewport(PlayGame.V_WIDTH/PlayGame.PPM,PlayGame.V_HEIGHT/PlayGame.PPM,gameCam);
 
         //Criando a hud
-        hud = new Hud(game.batch,score,vidas);
+        //hud = new Hud(game.batch,score,vidas);
 
         //carregar o map e configurar
         mapLoader = new TmxMapLoader();
@@ -100,7 +100,7 @@ public class PlayScreenCasa implements Screen {
         player = new Player(world, atlas);
 
         // setar posição inicial
-        player.b2body.setTransform(5.65f, 5.57f, 0);
+        player.b2body.setTransform(x, y, 0);
 
 
 
@@ -177,7 +177,7 @@ public class PlayScreenCasa implements Screen {
         world.step(1 / 60f, 6, 2);
         player.update(dt);
         enemy1.update(dt);
-        hud.update(dt);
+        //hud.update(dt);
         //bloco.update(dt);
 
         // fixar a camera com o player
@@ -207,7 +207,7 @@ public class PlayScreenCasa implements Screen {
         //render Box2DDebugLines camera principal
         b2dr.render(world,gameCam.combined);
         //desenha a HUD
-        hud.stage.draw();
+        //hud.stage.draw();
         //o q a camera da hud ver.
         game.batch.setProjectionMatrix(gameCam.combined);
         game.batch.begin();
@@ -218,7 +218,7 @@ public class PlayScreenCasa implements Screen {
         game.batch.end();
 
         if ((4.50f <= player.getX() && player.getX() <= 4.60f) && (3.22f <= player.getY() && player.getY()<= 3.25f)){
-            game.setScreen(new PlayScreenVila(game,getHud(),7.0f,4.40f));
+            game.setScreen(new PlayScreenVila(game, 7.20f, 4.40f));
             dispose();
         }
         
@@ -269,7 +269,7 @@ public class PlayScreenCasa implements Screen {
         renderer.dispose();
         world.dispose();
         b2dr.dispose();
-        hud.dispose();
+        //hud.dispose();
 
     }
 }

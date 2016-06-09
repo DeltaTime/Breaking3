@@ -56,7 +56,7 @@ public class PlayScreenCaverna implements Screen {
     //sounds
     private Music music;
 
-    public PlayScreenCaverna(PlayGame game){
+    public PlayScreenCaverna(PlayGame game, float x, float y){
         this.game = game;
 
         atlas = new TextureAtlas("PlayGamePackege.pack");
@@ -85,7 +85,7 @@ public class PlayScreenCaverna implements Screen {
 
 
         player = new Player(world, atlas);
-        player.b2body.setTransform(4.72f, 11.63f, 0);
+        player.b2body.setTransform(x, y, 0);
 
 
 
@@ -197,12 +197,12 @@ public class PlayScreenCaverna implements Screen {
         game.batch.end();
 
         if ((4.64f <= player.getX() && player.getX() <= 4.79f) && (11.80f <= player.getY() && player.getY()<= 11.84f)){
-           // game.setScreen(new PlayScreenVila(game));
+            game.setScreen(new PlayScreenVila(game , 11.69f, 11.35f));
             dispose();
         }
         
         if ((11.64f <= player.getX() && player.getX() <= 11.67f) && (4.17f <= player.getY() && player.getY()<= 4.19f)){
-            game.setScreen(new PlayScreenBoss(game));
+            game.setScreen(new PlayScreenBoss(game, 7.69f , 11.15f));
             dispose();
         }
 

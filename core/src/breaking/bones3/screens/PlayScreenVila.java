@@ -58,7 +58,7 @@ public class PlayScreenVila implements Screen {
     private float x;
     private float y;
 
-    public PlayScreenVila(PlayGame game, Hud hud, float x, float y){
+    public PlayScreenVila(PlayGame game, float x, float y){
         this.game = game;
         this.hud = hud;
         this.x = x;
@@ -205,12 +205,12 @@ public class PlayScreenVila implements Screen {
         game.batch.end();
 
         if ((7.17f <= player.getX() && player.getX() <= 7.19f) && (4.48f <= player.getY() && player.getY()<= 4.52f)){
-            game.setScreen(new PlayScreenCasa(game,0,3));
+            game.setScreen(new PlayScreenCasa(game,4.56f,3.38f));
             dispose();
         }
         
         if ((11.66f <= player.getX() && player.getX() <= 11.67f) && (11.50f <= player.getY() && player.getY()<= 11.52f)){
-            game.setScreen(new PlayScreenCaverna(game));
+            game.setScreen(new PlayScreenCaverna(game, 4.70f, 11.61f));
             dispose();
         }
 
