@@ -33,11 +33,16 @@ public class Enemy1 extends Sprite {
     private float stateTimer;
     private boolean walkingRight;
     private int pontos;
+    private float x;
+    private float y;
+
 
 
     public Enemy1(World world, TextureAtlas atlas){
         super(atlas.findRegion("InimigoDireita"));
         this.world = world;
+        this.x = 0;
+        this.y = 0;
 
         currentState = State.STANDING;
         previousState = State.STANDING;
@@ -66,6 +71,8 @@ public class Enemy1 extends Sprite {
 
     public void update(float dt){
         setPosition(b2body.getPosition().x - getWidth()/2,b2body.getPosition().y - getHeight()/2);
+        //deslocamento do inimigo
+        b2body.applyLinearImpulse(new Vector2(x, y), b2body.getWorldCenter(), true);
         setRegion(getFrame(dt));
 
 
