@@ -56,7 +56,7 @@ public class PlayScreenCaverna implements Screen {
     //sounds
     private Music music;
 
-    public PlayScreenCaverna(PlayGame game, float x, float y){
+    public PlayScreenCaverna(PlayGame game, float x, float y, int score, int vidas){
         this.game = game;
 
         atlas = new TextureAtlas("PlayGamePackege.pack");
@@ -66,7 +66,7 @@ public class PlayScreenCaverna implements Screen {
         gameport = new FitViewport(PlayGame.V_WIDTH/PlayGame.PPM,PlayGame.V_HEIGHT/PlayGame.PPM,gameCam);
 
         //Criando a hud
-        hud = new Hud(game.batch,0,3);
+        hud = new Hud(game.batch,score,vidas);
 
         //carregar o map e configurar
         mapLoader = new TmxMapLoader();
@@ -197,12 +197,12 @@ public class PlayScreenCaverna implements Screen {
         game.batch.end();
 
         if ((4.64f <= player.getX() && player.getX() <= 4.79f) && (11.80f <= player.getY() && player.getY()<= 11.84f)){
-            game.setScreen(new PlayScreenVila(game , 11.69f, 11.35f));
+            game.setScreen(new PlayScreenVila(game , 11.69f, 11.35f, hud.getScore(), hud.getVidas()));
             dispose();
         }
         
         if ((11.64f <= player.getX() && player.getX() <= 11.67f) && (4.17f <= player.getY() && player.getY()<= 4.19f)){
-            game.setScreen(new PlayScreenBoss(game, 7.69f , 11.15f));
+            game.setScreen(new PlayScreenBoss(game, 7.69f , 11.15f, hud.getScore(), hud.getVidas()));
             dispose();
         }
 

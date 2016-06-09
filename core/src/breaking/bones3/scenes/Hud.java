@@ -78,7 +78,15 @@ public class Hud implements Disposable {
 
     }
 
+    public Integer getScore() {
+        return score;
+    }
 
+    public Integer getVidas() {
+        return vidas;
+    }
+
+    
 
     @Override
     public void dispose() {

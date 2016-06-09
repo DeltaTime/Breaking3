@@ -58,9 +58,8 @@ public class PlayScreenVila implements Screen {
     private float x;
     private float y;
 
-    public PlayScreenVila(PlayGame game, float x, float y){
+    public PlayScreenVila(PlayGame game, float x, float y, int score, int vidas){
         this.game = game;
-        this.hud = hud;
         this.x = x;
         this.y = y;
         
@@ -72,7 +71,7 @@ public class PlayScreenVila implements Screen {
         gameport = new FitViewport(PlayGame.V_WIDTH/PlayGame.PPM,PlayGame.V_HEIGHT/PlayGame.PPM,gameCam);
 
         //Criando a hud
-        hud = new Hud(game.batch,0,3);
+        hud = new Hud(game.batch,score,vidas);
 
         //carregar o map e configurar
         mapLoader = new TmxMapLoader();
@@ -205,12 +204,12 @@ public class PlayScreenVila implements Screen {
         game.batch.end();
 
         if ((7.17f <= player.getX() && player.getX() <= 7.19f) && (4.48f <= player.getY() && player.getY()<= 4.52f)){
-            game.setScreen(new PlayScreenCasa(game,4.56f,3.38f));
+            game.setScreen(new PlayScreenCasa(game,4.56f,3.38f, hud.getScore(), hud.getVidas()));
             dispose();
         }
         
         if ((11.66f <= player.getX() && player.getX() <= 11.67f) && (11.50f <= player.getY() && player.getY()<= 11.52f)){
-            game.setScreen(new PlayScreenCaverna(game, 4.70f, 11.61f));
+            game.setScreen(new PlayScreenCaverna(game, 4.70f, 11.61f, hud.getScore(), hud.getVidas()));
             dispose();
         }
 

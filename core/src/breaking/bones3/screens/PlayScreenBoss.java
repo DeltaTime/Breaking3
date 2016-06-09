@@ -56,7 +56,7 @@ public class PlayScreenBoss implements Screen {
     //sounds
     private Music music;
 
-    public PlayScreenBoss(PlayGame game, float x, float y){
+    public PlayScreenBoss(PlayGame game, float x, float y, int score, int vidas){
         this.game = game;
 
         atlas = new TextureAtlas("PlayGamePackege.pack");
@@ -66,7 +66,7 @@ public class PlayScreenBoss implements Screen {
         gameport = new FitViewport(PlayGame.V_WIDTH/PlayGame.PPM,PlayGame.V_HEIGHT/PlayGame.PPM,gameCam);
 
         //Criando a hud
-        hud = new Hud(game.batch,0,3);
+        hud = new Hud(game.batch,score,vidas);
 
         //carregar o map e configurar
         mapLoader = new TmxMapLoader();
@@ -197,7 +197,7 @@ public class PlayScreenBoss implements Screen {
         game.batch.end();
 
         if ((7.60f <= player.getX() && player.getX() <= 7.77f) && (11.34f <= player.getY() && player.getY()<= 11.39f)){
-            game.setScreen(new PlayScreenCaverna(game, 11.65f, 4.36f));
+            game.setScreen(new PlayScreenCaverna(game, 11.65f, 4.36f, hud.getScore(), hud.getVidas()));
             dispose();
         }
         
