@@ -17,7 +17,9 @@ import java.util.HashSet;
  */
 public class Pathfinding {
     private Grid grid;
+    /*
     public Pathfinding(Grid _grid){
+
         this.grid = _grid;
     }
     public void FindPath(Vector2 startPos, Vector2 targetPos){
@@ -92,4 +94,6 @@ public class Pathfinding {
             return 14 * dstY + 10 * (dstX - dstY);
         return 14 * dstX + 10 * (dstY - dstX);
     }
+*/
 }
+

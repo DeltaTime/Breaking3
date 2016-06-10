@@ -142,7 +142,7 @@ public class Player extends Sprite {
         }
         */
 
-        if (b2body.getLinearVelocity().x > 0 || b2body.getLinearVelocity().x > 0  )
+        if (b2body.getLinearVelocity().x > 0 || b2body.getLinearVelocity().x < 0  )
             return State.WALKING;
         if (b2body.getLinearVelocity().y > 0 )
             return State.SUBIR;

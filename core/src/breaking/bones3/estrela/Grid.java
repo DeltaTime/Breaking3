@@ -18,8 +18,11 @@ import java.util.ArrayList;
  * 
  */
 public class Grid {
+
     private TiledMap map;
+    /*
     private World world;
+
     public Vector2 gridWorldSize;
     public float nodeRadius;
     public Node[][] grid;
@@ -91,7 +94,7 @@ public class Grid {
     }
 
     public boolean foundNodeNotWalkable(int x, int y) {
-        for (Node_Grid node: this.b2WorldCreator.getObjects()) {
+       for (Node_Grid node: this.b2WorldCreator.getObjects()) {
             if(x >= (int)(node.getStartworldPosition().x / nodeRadius)
                     && x <= (int)(node.getEndsworldPosition().x / nodeRadius)
                     && y >= (int)(node.getStartworldPosition().y / nodeRadius)
@@ -101,5 +104,5 @@ public class Grid {
         }
         return true;
     }
-
+*/
 }
