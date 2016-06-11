@@ -20,7 +20,7 @@ import com.badlogic.gdx.math.Vector3;
  *
  * @author Matheus
  */
-public class Dificuldade implements Screen {
+public class GameOver implements Screen {
     
     private PlayGame game;
     private OrthographicCamera camera;
@@ -38,7 +38,7 @@ public class Dificuldade implements Screen {
     private Sprite sprite_background;
 
     
-    public Dificuldade(PlayGame game){
+    public GameOver(PlayGame game){
         this.game = game;
         camera = new OrthographicCamera();
         camera.setToOrtho(false, 800, 480);
@@ -177,7 +177,6 @@ public class Dificuldade implements Screen {
 
     @Override
     public void dispose() {
-        
         
     }
     

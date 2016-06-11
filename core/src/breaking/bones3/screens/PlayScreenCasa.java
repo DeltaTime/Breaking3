@@ -223,10 +223,8 @@ public class PlayScreenCasa implements Screen {
         }
         
         //seleciona a playScreen qdo morrer
-        if(Hud.getVidas()<=0){
-            game.setScreen(new TelaAbertura(game));
-            
-            dispose();
+        if(Hud.getVidas() <= 0){
+            game.setScreen(new Dificuldade(game));
         }
             
         
