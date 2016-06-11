@@ -27,11 +27,11 @@ public class Menu implements Screen {
     private Vector3 click_posicao;
     
     private Texture texture_novojogo;
-    private Texture texture_dificuldade;
+    private Texture texture_background;
     private Texture texture_ajuda;
     private Texture texture_sair;
     private Sprite sprite_novojogo;
-    private Sprite sprite_dificuldade;
+    private Sprite sprite_background;
     private Sprite sprite_ajuda;
     private Sprite sprite_sair;
 
@@ -54,22 +54,23 @@ public class Menu implements Screen {
         texture_sair = new Texture("sair.png");
         sprite_sair = new Sprite(texture_sair);
         sprite_sair.setOrigin(sprite_sair.getWidth()/2, sprite_sair.getHeight()/2);
-        sprite_sair.setPosition(((Gdx.graphics.getWidth()/2) - (texture_sair.getWidth()/2)), 60);
+        sprite_sair.setPosition(((Gdx.graphics.getWidth()/2) - (texture_sair.getWidth()/2)), 190);
         
         texture_ajuda = new Texture("ajuda.png");
         sprite_ajuda = new Sprite(texture_ajuda);
         sprite_ajuda.setOrigin(sprite_ajuda.getWidth()/2, sprite_ajuda.getHeight()/2);
-        sprite_ajuda.setPosition(((Gdx.graphics.getWidth()/2) - (texture_ajuda.getWidth()/2)), 160);
+        sprite_ajuda.setPosition(((Gdx.graphics.getWidth()/2) - (texture_ajuda.getWidth()/2)), 250);
         
-        texture_dificuldade = new Texture("dificuldade.png");
-        sprite_dificuldade = new Sprite(texture_dificuldade);
-        sprite_dificuldade.setOrigin(sprite_dificuldade.getWidth()/2, sprite_dificuldade.getHeight()/2);
-        sprite_dificuldade.setPosition(((Gdx.graphics.getWidth()/2) - (texture_dificuldade.getWidth()/2)), 260);
-        
+         
         texture_novojogo = new Texture("novojogo.png");
         sprite_novojogo = new Sprite(texture_novojogo);
         sprite_novojogo.setOrigin(sprite_novojogo.getWidth()/2, sprite_novojogo.getHeight()/2);
-        sprite_novojogo.setPosition(((Gdx.graphics.getWidth()/2) - (texture_novojogo.getWidth()/2)), 360);
+        sprite_novojogo.setPosition(((Gdx.graphics.getWidth()/2) - (texture_novojogo.getWidth()/2)), 310);
+        
+        texture_background = new Texture("bonesbackground.png");
+        sprite_background = new Sprite(texture_background);
+        sprite_background.setOrigin(sprite_background.getWidth()/2, sprite_background.getHeight()/2);
+        sprite_background.setPosition(((Gdx.graphics.getWidth()/2) - (texture_background.getWidth()/2)), 0);
         
     }
 
@@ -90,7 +91,7 @@ public class Menu implements Screen {
         game.batch.end();
         
         game.batch.begin();
-        sprite_dificuldade.draw(game.batch);
+        sprite_background.draw(game.batch);
         game.batch.end();
         
         game.batch.begin();
@@ -102,22 +103,14 @@ public class Menu implements Screen {
             camera.unproject(click_posicao);
             if(click_posicao.x > sprite_novojogo.getX() && click_posicao.x < (sprite_novojogo.getX() + sprite_novojogo.getWidth())){
                 if(click_posicao.y > sprite_novojogo.getY() && click_posicao.y < (sprite_novojogo.getY() + sprite_novojogo.getHeight())){
-                    game.setScreen(new PlayScreenCasa(game,5.65f,5.57f, 0, 3));
-                    dispose();
-                }
-            }
-        }
-        
-        if(Gdx.input.isTouched()){
-            click_posicao.set(Gdx.input.getX(), Gdx.input.getY(), 0);
-            camera.unproject(click_posicao);
-            if(click_posicao.x > sprite_dificuldade.getX() && click_posicao.x < (sprite_dificuldade.getX() + sprite_dificuldade.getWidth())){
-                if(click_posicao.y > sprite_dificuldade.getY() && click_posicao.y < (sprite_dificuldade.getY() + sprite_dificuldade.getHeight())){
+                    //game.setScreen(new PlayScreenCasa(game,5.65f,5.57f, 0, 3));
                     game.setScreen(new Dificuldade(game));
                     dispose();
                 }
             }
         }
+        
+       
         
         if(Gdx.input.isTouched()){
             click_posicao.set(Gdx.input.getX(), Gdx.input.getY(), 0);
