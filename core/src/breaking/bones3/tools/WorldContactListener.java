@@ -11,6 +11,7 @@ import breaking.bones3.sprites.Enemy;
 import breaking.bones3.sprites.InteractiveTileObject;
 import breaking.bones3.sprites.Player;
 import breaking.bones3.sprites.Porta;
+import com.badlogic.gdx.Gdx;
 
 /**
  * Created by wolos on 16/05/2016.
@@ -37,12 +38,10 @@ public class WorldContactListener implements ContactListener{
         
         
         switch (cDef){
-            case PlayGame.ENEMY_COLISION_COLISION | PlayGame.PLAYER_BIT:
-                if(fixA.getFilterData().categoryBits == PlayGame.ENEMY_COLISION_COLISION)
-                    ((Enemy)fixA.getUserData()).hitonColision((Player) fixB.getUserData());
-                else if(fixB.getFilterData().categoryBits == PlayGame.ENEMY_COLISION_COLISION)
-                    ((Enemy)fixB.getUserData()).hitonColision((Player) fixB.getUserData());
-
+            case PlayGame.PLAYER_BIT | PlayGame.ENEMY_BIT:
+                if(fixA.getFilterData().categoryBits == PlayGame.PLAYER_BIT){
+                    Gdx.app.log("Colisao: Player -> ","Inimigo");
+                    }
 
         }
 

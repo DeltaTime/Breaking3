@@ -178,7 +178,7 @@ public class PlayScreenCasa implements Screen {
         player.update(dt);
         enemy1.update(dt);
         hud.update(dt);
-        //bloco.update(dt);
+        
 
         // fixar a camera com o player
         gameCam.position.x = player.b2body.getPosition().x;

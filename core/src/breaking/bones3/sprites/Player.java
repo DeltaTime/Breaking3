@@ -131,17 +131,6 @@ public class Player extends Sprite {
     public State getState(){
 
 
-        /*
-        if(b2body.getLinearVelocity().x != 0 || b2body.getLinearVelocity().x != 0) {
-            return State.WALKING;
-        }
-
-        else{
-            return State.STANDING;
-
-        }
-        */
-
         if (b2body.getLinearVelocity().x > 0 || b2body.getLinearVelocity().x < 0  )
             return State.WALKING;
         if (b2body.getLinearVelocity().y > 0 )
