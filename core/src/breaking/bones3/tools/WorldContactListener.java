@@ -9,6 +9,7 @@ import com.badlogic.gdx.physics.box2d.Manifold;
 import breaking.bones3.PlayGame;
 import breaking.bones3.scenes.Hud;
 import breaking.bones3.sprites.Enemy;
+import breaking.bones3.sprites.Enemy1;
 import breaking.bones3.sprites.InteractiveTileObject;
 import breaking.bones3.sprites.Player;
 import breaking.bones3.sprites.Porta;
@@ -36,11 +37,12 @@ public class WorldContactListener implements ContactListener{
             case PlayGame.PLAYER_BIT | PlayGame.OBJECT_BIT:
                 if(fixA.getUserData() != null && InteractiveTileObject.class.isAssignableFrom(fixA.getUserData().getClass())){
                 ((InteractiveTileObject)fixA.getUserData()).onEspadaHit();
-                
+                }
+           
 
-        }
 
-        
+
+
         }
     }
 

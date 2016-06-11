@@ -120,4 +120,13 @@ public class Hud implements Disposable {
     
 
 
+    public void setScore(Integer score) {
+        Hud.score = score;
+    }
+
+
+
+    public void setVidas(Integer vidas) {
+        this.vidas = vidas;
+    }
 }

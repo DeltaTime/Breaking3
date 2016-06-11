@@ -72,6 +72,7 @@ public class Enemy1 extends Sprite {
     public void update(float dt){
         setPosition(b2body.getPosition().x - getWidth()/2,b2body.getPosition().y - getHeight()/2);
         //deslocamento do inimigo
+
         b2body.applyLinearImpulse(new Vector2(x, y), b2body.getWorldCenter(), true);
         setRegion(getFrame(dt));
 
@@ -118,6 +119,7 @@ public class Enemy1 extends Sprite {
         }
 
     }
+
 
 
     public void definePlayer(){
