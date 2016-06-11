@@ -200,7 +200,11 @@ public class PlayScreenBoss implements Screen {
             game.setScreen(new PlayScreenCaverna(game, 11.65f, 4.36f, hud.getScore(), hud.getVidas()));
             dispose();
         }
-        
+        //seleciona a playScreen qdo morrer
+        if(Hud.getVidas()<=0){
+            game.setScreen(new Menu(game));
+            dispose();
+        }
         
 
 

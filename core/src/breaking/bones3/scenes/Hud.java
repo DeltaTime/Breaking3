@@ -78,11 +78,11 @@ public class Hud implements Disposable {
 
     }
 
-    public Integer getScore() {
+    public static Integer getScore() {
         return score;
     }
 
-    public Integer getVidas() {
+    public static Integer getVidas() {
         return vidas;
     }
 
@@ -116,6 +116,8 @@ public class Hud implements Disposable {
         vidasLabel.setText(String.format("%01d", vidas));
     
     }
+    
+    
 
 
 }

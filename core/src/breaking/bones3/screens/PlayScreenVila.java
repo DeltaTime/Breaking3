@@ -212,6 +212,11 @@ public class PlayScreenVila implements Screen {
             game.setScreen(new PlayScreenCaverna(game, 4.70f, 11.61f, hud.getScore(), hud.getVidas()));
             dispose();
         }
+        //seleciona a playScreen qdo morrer
+        if(Hud.getVidas()<=0){
+            game.setScreen(new Menu(game));
+            dispose();
+        }
 
 
 
