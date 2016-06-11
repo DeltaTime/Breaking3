@@ -23,7 +23,7 @@ public class Bau extends InteractiveTileObject {
         super(world, map, bounds);
         tileSet = map.getTileSets().getTileSet("Bones_C");
         fixture.setUserData(this);
-        setCategoryFilter(PlayGame.PECAS_BIT);
+        setCategoryFilter(PlayGame.OBJECT_BIT);
     }
     @Override
     public void onEspadaHit() {

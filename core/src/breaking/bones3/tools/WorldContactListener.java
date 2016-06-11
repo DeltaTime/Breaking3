@@ -7,6 +7,7 @@ import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.Manifold;
 
 import breaking.bones3.PlayGame;
+import breaking.bones3.scenes.Hud;
 import breaking.bones3.sprites.Enemy;
 import breaking.bones3.sprites.InteractiveTileObject;
 import breaking.bones3.sprites.Player;
@@ -24,29 +25,23 @@ public class WorldContactListener implements ContactListener{
         Fixture fixB = contact.getFixtureB();
 
         int cDef = fixA.getFilterData().categoryBits | fixB.getFilterData().categoryBits;
-        
-        if(fixA.getUserData() == "espada" || fixB.getUserData() == "espada"){
-            Fixture espada = fixA.getUserData() == "espada" ? fixA : fixB;
-            Fixture object = espada == fixA ? fixB : fixA;
-
-            if(object.getUserData() != null && InteractiveTileObject.class.isAssignableFrom(object.getUserData().getClass())){
-                ((InteractiveTileObject)object.getUserData()).onEspadaHit();
-
-            }
-
-        }
-        
+   
         
         switch (cDef){
             case PlayGame.PLAYER_BIT | PlayGame.ENEMY_BIT:
                 if(fixA.getFilterData().categoryBits == PlayGame.PLAYER_BIT){
                     Gdx.app.log("Colisao: Player -> ","Inimigo");
+                    Hud.reduzirVida(1);
                     }
+            case PlayGame.PLAYER_BIT | PlayGame.OBJECT_BIT:
+                if(fixA.getUserData() != null && InteractiveTileObject.class.isAssignableFrom(fixA.getUserData().getClass())){
+                ((InteractiveTileObject)fixA.getUserData()).onEspadaHit();
+                
 
         }
 
         
-
+        }
     }
 
     @Override

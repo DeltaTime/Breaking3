@@ -164,12 +164,6 @@ public class Player extends Sprite {
         fdef.shape = shape;
         b2body.createFixture(fdef);
 
-        espada = new EdgeShape();
-        espada.set(new Vector2(-10 / PlayGame.PPM, 1 / PlayGame.PPM), new Vector2(20 / PlayGame.PPM, 1 / PlayGame.PPM));
-        fdef.shape = espada;
-        fdef.isSensor = true;
-        b2body.createFixture(fdef).setUserData("espada");
-        espada.dispose();
 
 
     }

@@ -34,13 +34,13 @@ public class Hud implements Disposable {
     private Viewport viewport;
 
     private static Integer score;
-    private Integer vidas;
+    private static Integer vidas;
     private float timeCount;
     private float worldTimer;
     private static Label scoreLabel;
-    private Label vidasLabel;
+    private static Label vidasLabel;
     private Label scoreLabelTexto;
-    private Label vidasLabelTexto;
+    private static Label vidasLabelTexto;
     private Label countDown;
     private Object textStyle;
     private BitmapFont font;
@@ -109,6 +109,12 @@ public class Hud implements Disposable {
         score += value;
         scoreLabel.setText(String.format("%06d", score));
 
+    }
+    
+    public static void reduzirVida(int value){
+        vidas -= value;
+        vidasLabel.setText(String.format("%01d", vidas));
+    
     }
 
 
